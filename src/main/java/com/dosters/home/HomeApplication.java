@@ -1,13 +1,13 @@
-package com.hipsters.hipsters;
+package com.dosters.home;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class HipstersApplication {
+public class HomeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(HipstersApplication.class, args);
+		SpringApplication.run(HomeApplication.class, args);
 	}
 
 }

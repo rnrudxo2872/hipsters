@@ -1,10 +1,10 @@
-package com.hipsters.hipsters;
+package com.dosters.home;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class HipstersApplicationTests {
+class HomeApplicationTests {
 
 	@Test
 	void contextLoads() {
