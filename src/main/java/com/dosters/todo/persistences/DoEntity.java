@@ -1,4 +1,4 @@
-package com.dosters.home.todo.persistences;
+package com.dosters.todo.persistences;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
