@@ -1,4 +1,4 @@
-package com.dosters.home;
+package com.dosters;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -16,4 +16,10 @@ public class HomeController {
     public String home() {
         return "index";
     }
+
+    @GetMapping("/login")
+    public String login() {
+        return "auth-login";
+    }
+
 }

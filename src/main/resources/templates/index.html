@@ -6,41 +6,40 @@
   <title>Ecommerce Dashboard &mdash; Stisla</title>
 
   <!-- General CSS Files -->
-  <link rel="stylesheet" href="/stisla/assets/modules/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/stisla/assets/modules/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <!-- CSS Libraries -->
-  <link rel="stylesheet" href="/stisla/assets/modules/jqvmap/dist/jqvmap.min.css">
-  <link rel="stylesheet" href="/stisla/assets/modules/summernote/summernote-bs4.css">
-  <link rel="stylesheet" href="/stisla/assets/modules/owlcarousel2/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="/stisla/assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../node_modules/jqvmap/dist/jqvmap.min.css">
+  <link rel="stylesheet" href="../node_modules/summernote/dist/summernote-bs4.css">
+  <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
 
   <!-- Template CSS -->
-  <link rel="stylesheet" href="/stisla/assets/css/style.css">
-  <link rel="stylesheet" href="/stisla/assets/css/components.css">
-  <link rel="stylesheet" href="/stisla/assets/css/rtl.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/components.css">
 </head>
 
 <body>
   <div id="app">
-    <div class="main-wrapper main-wrapper-1">
+    <div class="main-wrapper">
       <div class="navbar-bg"></div>
       <nav class="navbar navbar-expand-lg main-navbar">
-        <form class="form-inline ml-auto">
-          <ul class="navbar-nav ml-3">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
             <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
             <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
           </ul>
-          <div class="search-element text-right">
-            <input class="form-control" type="search" placeholder="جستجو" aria-label="Search" data-width="250">
+          <div class="search-element">
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search" data-width="250">
             <button class="btn" type="submit"><i class="fas fa-search"></i></button>
             <div class="search-backdrop"></div>
             <div class="search-result">
               <div class="search-header">
-                نتیجه جستجو
+                Histories
               </div>
               <div class="search-item">
-                <a href="#">چگونه ناسا رو هک کنیم؟</a>
+                <a href="#">How to hack NASA using CSS</a>
                 <a href="#" class="search-close"><i class="fas fa-times"></i></a>
               </div>
               <div class="search-item">
@@ -48,47 +47,47 @@
                 <a href="#" class="search-close"><i class="fas fa-times"></i></a>
               </div>
               <div class="search-item">
-                <a href="#">پنل مدیریت</a>
+                <a href="#">#Stisla</a>
                 <a href="#" class="search-close"><i class="fas fa-times"></i></a>
               </div>
               <div class="search-header">
-                نتایج
+                Result
               </div>
               <div class="search-item">
                 <a href="#">
-                  <img class="ml-3 rounded" width="30" src="../assets/img/products/product-3-50.png" alt="product">
-                  آیفون s9 تولید شد
+                  <img class="mr-3 rounded" width="30" src="../assets/img/products/product-3-50.png" alt="product">
+                  oPhone S9 Limited Edition
                 </a>
               </div>
               <div class="search-item">
                 <a href="#">
-                  <img class="ml-3 rounded" width="30" src="../assets/img/products/product-2-50.png" alt="product">
-                  چه شادی هایی که زیر پای انسانها سرکوب شدند
+                  <img class="mr-3 rounded" width="30" src="../assets/img/products/product-2-50.png" alt="product">
+                  Drone X2 New Gen-7
                 </a>
               </div>
               <div class="search-item">
                 <a href="#">
-                  <img class="ml-3 rounded" width="30" src="../assets/img/products/product-1-50.png" alt="product">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.
+                  <img class="mr-3 rounded" width="30" src="../assets/img/products/product-1-50.png" alt="product">
+                  Headphone Blitz
                 </a>
               </div>
               <div class="search-header">
-                پروژه ها
+                Projects
               </div>
               <div class="search-item">
                 <a href="#">
-                  <div class="search-icon bg-danger text-white ml-3">
+                  <div class="search-icon bg-danger text-white mr-3">
                     <i class="fas fa-code"></i>
                   </div>
-                  متریال ادمین پنل
+                  Stisla Admin Template
                 </a>
               </div>
               <div class="search-item">
                 <a href="#">
-                  <div class="search-icon bg-primary text-white ml-3">
+                  <div class="search-icon bg-primary text-white mr-3">
                     <i class="fas fa-laptop"></i>
                   </div>
-                  ایجاد صفحه لندینگ
+                  Create a new Homepage Design
                 </a>
               </div>
             </div>
@@ -96,10 +95,10 @@
         </form>
         <ul class="navbar-nav navbar-right">
           <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
-            <div class="dropdown-menu dropdown-list text-right dropdown-menu-left">
-              <div class="dropdown-header">پیام ها
-                <div class="float-left">
-                  <a href="#">علامتگذاری همه بصورت خوانده شده</a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Messages
+                <div class="float-right">
+                  <a href="#">Mark All As Read</a>
                 </div>
               </div>
               <div class="dropdown-list-content dropdown-list-message">
@@ -108,10 +107,10 @@
                     <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle">
                     <div class="is-online"></div>
                   </div>
-                  <div class="dropdown-item-desc text-right">
-                    <b>مهدی خانزادی</b>
-                    <p>سلام داداچ!</p>
-                    <div class="time">۱۰ ساعت پیش</div>
+                  <div class="dropdown-item-desc">
+                    <b>Kusnaedi</b>
+                    <p>Hello, Bro!</p>
+                    <div class="time">10 Hours Ago</div>
                   </div>
                 </a>
                 <a href="#" class="dropdown-item dropdown-item-unread">
@@ -119,9 +118,9 @@
                     <img alt="image" src="../assets/img/avatar/avatar-2.png" class="rounded-circle">
                   </div>
                   <div class="dropdown-item-desc">
-                    <b>مهیار انصاری</b>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.</p>
-                    <div class="time">۱۲ ساعت پیش</div>
+                    <b>Dedik Sugiharto</b>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                    <div class="time">12 Hours Ago</div>
                   </div>
                 </a>
                 <a href="#" class="dropdown-item dropdown-item-unread">
@@ -130,9 +129,9 @@
                     <div class="is-online"></div>
                   </div>
                   <div class="dropdown-item-desc">
-                    <b>آمیتا پاچان</b>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.</p>
-                    <div class="time">۱۲ ساعت پیش</div>
+                    <b>Agung Ardiansyah</b>
+                    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="time">12 Hours Ago</div>
                   </div>
                 </a>
                 <a href="#" class="dropdown-item">
@@ -140,9 +139,9 @@
                     <img alt="image" src="../assets/img/avatar/avatar-4.png" class="rounded-circle">
                   </div>
                   <div class="dropdown-item-desc">
-                    <b>مهدی خانزادی</b>
-                    <p>سلام سیستم پشتیبانی پاترونیک رو استفاده کنید</p>
-                    <div class="time">۱۶ ساعت پیش</div>
+                    <b>Ardian Rahardiansyah</b>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit ess</p>
+                    <div class="time">16 Hours Ago</div>
                   </div>
                 </a>
                 <a href="#" class="dropdown-item">
@@ -150,32 +149,32 @@
                     <img alt="image" src="../assets/img/avatar/avatar-5.png" class="rounded-circle">
                   </div>
                   <div class="dropdown-item-desc">
-                    <b>لورم ایپسوم</b>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.</p>
-                    <div class="time">دیروز</div>
+                    <b>Alfa Zulkarnain</b>
+                    <p>Exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+                    <div class="time">Yesterday</div>
                   </div>
                 </a>
               </div>
               <div class="dropdown-footer text-center">
-                <a href="#"> دیدن همه پیام ها<i class="fas fa-chevron-left"></i></a>
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
               </div>
             </div>
           </li>
           <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-left">
-              <div class="dropdown-header text-right">نوتیفیکیشن ها
-                <div class="float-left">
-                  <a href="#"> علامتگذاری همه بصورت خوانده شده</a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Notifications
+                <div class="float-right">
+                  <a href="#">Mark All As Read</a>
                 </div>
               </div>
-              <div class="dropdown-list-content dropdown-list-icons text-right">
+              <div class="dropdown-list-content dropdown-list-icons">
                 <a href="#" class="dropdown-item dropdown-item-unread">
                   <div class="dropdown-item-icon bg-primary text-white">
                     <i class="fas fa-code"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    قالب مدیریتی متریال اپدیت جدید داد!
-                    <div class="time text-primary">۲ دقیقه پیش</div>
+                    Template update is available now!
+                    <div class="time text-primary">2 Min Ago</div>
                   </div>
                 </a>
                 <a href="#" class="dropdown-item">
@@ -183,8 +182,8 @@
                     <i class="far fa-user"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    <b>شما</b> و <b>مهیار انصاری</b> هم اکنون همکار هستید.
-                    <div class="time">۱۰ ساعت پیش</div>
+                    <b>You</b> and <b>Dedik Sugiharto</b> are now friends
+                    <div class="time">10 Hours Ago</div>
                   </div>
                 </a>
                 <a href="#" class="dropdown-item">
@@ -192,8 +191,8 @@
                     <i class="fas fa-check"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    <b>مهدی خانزادی</b> اطلاعات مرتبط با <b>قالب</b> را <b>آپلود کرد.</b>
-                    <div class="time">۱۲ ساعت پیش</div>
+                    <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to <b>Done</b>
+                    <div class="time">12 Hours Ago</div>
                   </div>
                 </a>
                 <a href="#" class="dropdown-item">
@@ -201,8 +200,8 @@
                     <i class="fas fa-exclamation-triangle"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    فضای هارد دیسک پر شده است لطفا آن را خالی کنید.
-                    <div class="time">۱۷ ساعت پیش</div>
+                    Low disk space. Let's clean it!
+                    <div class="time">17 Hours Ago</div>
                   </div>
                 </a>
                 <a href="#" class="dropdown-item">
@@ -210,159 +209,195 @@
                     <i class="fas fa-bell"></i>
                   </div>
                   <div class="dropdown-item-desc">
-                    به قالب متریال خوش آمدید
-                    <div class="time">دیروز</div>
+                    Welcome to Stisla template!
+                    <div class="time">Yesterday</div>
                   </div>
                 </a>
               </div>
               <div class="dropdown-footer text-center">
-                <a href="#">
-                  <span>نمایش همه</span>
-                  <i class="fas fa-chevron-left"></i>
-                </a>
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
               </div>
             </div>
           </li>
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
             <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block">سلام مهدی</div></a>
-            <div class="dropdown-menu dropdown-menu-right text-right">
-              <div class="dropdown-title text-center">۵ دقیقه پیش لاگین کردین</div>
+            <div class="d-sm-none d-lg-inline-block">Hi, Ujang Maman</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-title">Logged in 5 min ago</div>
               <a href="features-profile.html" class="dropdown-item has-icon">
-                <span>پروفایل</span>
-                <i class="far fa-user"></i>
+                <i class="far fa-user"></i> Profile
               </a>
               <a href="features-activities.html" class="dropdown-item has-icon">
-                <span>فعالیت ها</span>
-                <i class="fas fa-bolt"></i>
+                <i class="fas fa-bolt"></i> Activities
               </a>
               <a href="features-settings.html" class="dropdown-item has-icon">
-                <span>تنظیمات</span>
-                <i class="fas fa-cog"></i>
+                <i class="fas fa-cog"></i> Settings
               </a>
               <div class="dropdown-divider"></div>
               <a href="#" class="dropdown-item has-icon text-danger">
-                <span>خروج</span>
-                <i class="fas fa-sign-out-alt"></i>
+                <i class="fas fa-sign-out-alt"></i> Logout
               </a>
             </div>
           </li>
         </ul>
       </nav>
-      <div class="main-sidebar sidebar-style-2">
+      <div class="main-sidebar">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html">مدیریت پاترونیک</a>
+            <a href="index.html">Stisla</a>
           </div>
           <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">مدیریت فروش</a>
+            <a href="index.html">St</a>
           </div>
           <ul class="sidebar-menu">
-            <li class="menu-header">داشبورد</li>
-            <li class="dropdown active">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>داشبورد</span></a>
-              <ul class="dropdown-menu">
-                <li class=active><a class="nav-link" href="index-0.html">داشبورد عمومی</a></li>
-                <li><a class="nav-link" href="index.html">داشبورد فروش محصولات</a></li>
-              </ul>
-            </li>
-            <li class="menu-header">امکانات بیشتر</li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>صفحه بندی</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="layout-default.html">حالت پیش فرض</a></li>
-                <li><a class="nav-link" href="layout-transparent.html">سایدبار بدون رنگ</a></li>
-                <li><a class="nav-link" href="layout-top-navigation.html">نویگیشن بالا</a></li>
-              </ul>
-            </li>
-            <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>صفحه خالی</span></a></li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>بوت استرپ</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="bootstrap-alert.html">آلرت</a></li>
-                <li><a class="nav-link" href="bootstrap-badge.html">بدج</a></li>
-                <li><a class="nav-link" href="bootstrap-breadcrumb.html">بردکرامپ</a></li>
-                <li><a class="nav-link" href="bootstrap-buttons.html">دکمه ها</a></li>
-                <li><a class="nav-link" href="bootstrap-card.html">کارت</a></li>
-                <li><a class="nav-link" href="bootstrap-carousel.html">کروسل</a></li>
-                <li><a class="nav-link" href="bootstrap-collapse.html">کولاپس</a></li>
-                <li><a class="nav-link" href="bootstrap-dropdown.html">دراپ دون</a></li>
-                <li><a class="nav-link" href="bootstrap-form.html">فرم</a></li>
-                <li><a class="nav-link" href="bootstrap-list-group.html">لیست گروه</a></li>
-                <li><a class="nav-link" href="bootstrap-media-object.html">مدیا ابجکت</a></li>
-                <li><a class="nav-link" href="bootstrap-modal.html">مودال</a></li>
-                <li><a class="nav-link" href="bootstrap-nav.html">نویگیشن</a></li>
-                <li><a class="nav-link" href="bootstrap-navbar.html">نوبار</a></li>
-                <li><a class="nav-link" href="bootstrap-pagination.html">پجینیشن</a></li>
-                <li><a class="nav-link" href="bootstrap-popover.html">پاپ اور</a></li>
-                <li><a class="nav-link" href="bootstrap-progress.html">پراگرس</a></li>
-                <li><a class="nav-link" href="bootstrap-table.html">جدول</a></li>
-                <li><a class="nav-link" href="bootstrap-tooltip.html">تولتیپ</a></li>
-                <li><a class="nav-link" href="bootstrap-typography.html">تایپوگرافی</a></li>
-              </ul>
-            </li>
-            <li class="menu-header">امکانات دیگر</li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>کامپوننت ها</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="components-gallery.html">گالری</a></li>
-                <li><a class="nav-link" href="components-multiple-upload.html">مولتی آپلود</a></li>
-                <li><a class="nav-link" href="components-tab.html">تب</a></li>
-                <li><a class="nav-link" href="components-table.html">جدول</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>فرم ها</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="forms-advanced-form.html">فرم پیشرفته</a></li>
-                <li><a class="nav-link" href="forms-editor.html">ویرایشگر</a></li>
-                <li><a class="nav-link" href="forms-validation.html">ولیدیشن</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-plug"></i> <span>ماژول ها</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="modules-calendar.html">تقویم</a></li>
-                <li><a class="nav-link" href="modules-chartjs.html">چارت ها</a></li>
-                <li><a class="nav-link" href="modules-datatables.html">دیتاتیبل</a></li>
-                <li><a class="nav-link" href="modules-flag.html">پرچم</a></li>
-                <li><a class="nav-link" href="modules-font-awesome.html">فونت اوسوم</a></li>
-                <li><a class="nav-link" href="modules-ion-icons.html">ای او ن ایکون</a></li>
-                <li><a class="nav-link" href="modules-owl-carousel.html">اول کراسول</a></li>
-                <li><a class="nav-link" href="modules-sparkline.html">اسپارک لاین</a></li>
-                <li><a class="nav-link" href="modules-sweet-alert.html">سویت الرت</a></li>
-                <li><a class="nav-link" href="modules-toastr.html">توستر</a></li>
-                <li><a class="nav-link" href="modules-vector-map.html">وکتور مپ</a></li>
-                <li><a class="nav-link" href="modules-weather-icon.html">ایکن اب و هوا</a></li>
-              </ul>
-            </li>
-            <li class="menu-header">صفحات</li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i> <span>ثبت نام</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="auth-forgot-password.html">فراموشی کلمه عبور</a></li>
-                <li><a href="auth-login.html">لاگین</a></li>
-                <li><a href="auth-register.html">ثبت نام</a></li>
-                <li><a href="auth-reset-password.html">بازیابی کلمه عبور</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-exclamation"></i> <span>خطاها</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="errors-503.html">503</a></li>
-                <li><a class="nav-link" href="errors-403.html">403</a></li>
-                <li><a class="nav-link" href="errors-404.html">404</a></li>
-                <li><a class="nav-link" href="errors-500.html">500</a></li>
-              </ul>
-            </li>
-            <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>سازنده ها</span></a></li>
-          </ul>
+              <li class="menu-header">Dashboard</li>
+              <li class="nav-item dropdown active">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
+                  <li class="active"><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
+                </ul>
+              </li>
+              <li class="menu-header">Starter</li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Layout</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="layout-default.html">Default Layout</a></li>
+                  <li><a class="nav-link" href="layout-transparent.html">Transparent Sidebar</a></li>
+                  <li><a class="nav-link" href="layout-top-navigation.html">Top Navigation</a></li>
+                </ul>
+              </li>
+              <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="bootstrap-alert.html">Alert</a></li>
+                  <li><a class="nav-link" href="bootstrap-badge.html">Badge</a></li>
+                  <li><a class="nav-link" href="bootstrap-breadcrumb.html">Breadcrumb</a></li>
+                  <li><a class="nav-link" href="bootstrap-buttons.html">Buttons</a></li>
+                  <li><a class="nav-link" href="bootstrap-card.html">Card</a></li>
+                  <li><a class="nav-link" href="bootstrap-carousel.html">Carousel</a></li>
+                  <li><a class="nav-link" href="bootstrap-collapse.html">Collapse</a></li>
+                  <li><a class="nav-link" href="bootstrap-dropdown.html">Dropdown</a></li>
+                  <li><a class="nav-link" href="bootstrap-form.html">Form</a></li>
+                  <li><a class="nav-link" href="bootstrap-list-group.html">List Group</a></li>
+                  <li><a class="nav-link" href="bootstrap-media-object.html">Media Object</a></li>
+                  <li><a class="nav-link" href="bootstrap-modal.html">Modal</a></li>
+                  <li><a class="nav-link" href="bootstrap-nav.html">Nav</a></li>
+                  <li><a class="nav-link" href="bootstrap-navbar.html">Navbar</a></li>
+                  <li><a class="nav-link" href="bootstrap-pagination.html">Pagination</a></li>
+                  <li><a class="nav-link" href="bootstrap-popover.html">Popover</a></li>
+                  <li><a class="nav-link" href="bootstrap-progress.html">Progress</a></li>
+                  <li><a class="nav-link" href="bootstrap-table.html">Table</a></li>
+                  <li><a class="nav-link" href="bootstrap-tooltip.html">Tooltip</a></li>
+                  <li><a class="nav-link" href="bootstrap-typography.html">Typography</a></li>
+                </ul>
+              </li>
+              <li class="menu-header">Stisla</li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Components</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="components-article.html">Article</a></li>
+                  <li><a class="nav-link beep beep-sidebar" href="components-avatar.html">Avatar</a></li>
+                  <li><a class="nav-link" href="components-chat-box.html">Chat Box</a></li>
+                  <li><a class="nav-link beep beep-sidebar" href="components-empty-state.html">Empty State</a></li>
+                  <li><a class="nav-link" href="components-gallery.html">Gallery</a></li>
+                  <li><a class="nav-link beep beep-sidebar" href="components-hero.html">Hero</a></li>
+                  <li><a class="nav-link" href="components-multiple-upload.html">Multiple Upload</a></li>
+                  <li><a class="nav-link beep beep-sidebar" href="components-pricing.html">Pricing</a></li>
+                  <li><a class="nav-link" href="components-statistic.html">Statistic</a></li>
+                  <li><a class="nav-link" href="components-tab.html">Tab</a></li>
+                  <li><a class="nav-link" href="components-table.html">Table</a></li>
+                  <li><a class="nav-link" href="components-user.html">User</a></li>
+                  <li><a class="nav-link beep beep-sidebar" href="components-wizard.html">Wizard</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="forms-advanced-form.html">Advanced Form</a></li>
+                  <li><a class="nav-link" href="forms-editor.html">Editor</a></li>
+                  <li><a class="nav-link" href="forms-validation.html">Validation</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-map-marker-alt"></i> <span>Google Maps</span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="gmaps-advanced-route.html">Advanced Route</a></li>
+                  <li><a href="gmaps-draggable-marker.html">Draggable Marker</a></li>
+                  <li><a href="gmaps-geocoding.html">Geocoding</a></li>
+                  <li><a href="gmaps-geolocation.html">Geolocation</a></li>
+                  <li><a href="gmaps-marker.html">Marker</a></li>
+                  <li><a href="gmaps-multiple-marker.html">Multiple Marker</a></li>
+                  <li><a href="gmaps-route.html">Route</a></li>
+                  <li><a href="gmaps-simple.html">Simple</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-plug"></i> <span>Modules</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="modules-calendar.html">Calendar</a></li>
+                  <li><a class="nav-link" href="modules-chartjs.html">ChartJS</a></li>
+                  <li><a class="nav-link" href="modules-datatables.html">DataTables</a></li>
+                  <li><a class="nav-link" href="modules-flag.html">Flag</a></li>
+                  <li><a class="nav-link" href="modules-font-awesome.html">Font Awesome</a></li>
+                  <li><a class="nav-link" href="modules-ion-icons.html">Ion Icons</a></li>
+                  <li><a class="nav-link" href="modules-owl-carousel.html">Owl Carousel</a></li>
+                  <li><a class="nav-link" href="modules-sparkline.html">Sparkline</a></li>
+                  <li><a class="nav-link" href="modules-sweet-alert.html">Sweet Alert</a></li>
+                  <li><a class="nav-link" href="modules-toastr.html">Toastr</a></li>
+                  <li><a class="nav-link" href="modules-vector-map.html">Vector Map</a></li>
+                  <li><a class="nav-link" href="modules-weather-icon.html">Weather Icon</a></li>
+                </ul>
+              </li>
+              <li class="menu-header">Pages</li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i> <span>Auth</span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="auth-forgot-password.html">Forgot Password</a></li>
+                  <li><a href="auth-login.html">Login</a></li>
+                  <li><a class="beep beep-sidebar" href="auth-login-2.html">Login 2</a></li>
+                  <li><a href="auth-register.html">Register</a></li>
+                  <li><a href="auth-reset-password.html">Reset Password</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-exclamation"></i> <span>Errors</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="errors-503.html">503</a></li>
+                  <li><a class="nav-link" href="errors-403.html">403</a></li>
+                  <li><a class="nav-link" href="errors-404.html">404</a></li>
+                  <li><a class="nav-link" href="errors-500.html">500</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-bicycle"></i> <span>Features</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="features-activities.html">Activities</a></li>
+                  <li><a class="nav-link" href="features-post-create.html">Post Create</a></li>
+                  <li><a class="nav-link" href="features-posts.html">Posts</a></li>
+                  <li><a class="nav-link" href="features-profile.html">Profile</a></li>
+                  <li><a class="nav-link" href="features-settings.html">Settings</a></li>
+                  <li><a class="nav-link" href="features-setting-detail.html">Setting Detail</a></li>
+                  <li><a class="nav-link" href="features-tickets.html">Tickets</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-ellipsis-h"></i> <span>Utilities</span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="utilities-contact.html">Contact</a></li>
+                  <li><a class="nav-link" href="utilities-invoice.html">Invoice</a></li>
+                  <li><a href="utilities-subscribe.html">Subscribe</a></li>
+                </ul>
+              </li>
+              <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li>
+            </ul>
 
-          <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+            <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
               <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
-              <i class="fas fa-rocket"></i> مستندات قالب
-            </a>
-          </div>
+                <i class="fas fa-rocket"></i> Documentation
+              </a>
+            </div>
         </aside>
       </div>
 
@@ -372,51 +407,51 @@
           <div class="row">
             <div class="col-lg-4 col-md-4 col-sm-12">
               <div class="card card-statistic-2">
-                <div class="card-stats text-right">
-                  <div class="card-stats-title">آمار سفارش -
+                <div class="card-stats">
+                  <div class="card-stats-title">Order Statistics -
                     <div class="dropdown d-inline">
-                      <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">فروردین</a>
-                      <ul class="dropdown-menu dropdown-menu-right p-0 dropdown-menu-sm text-right">
-                        <li class="dropdown-title">انتخاب ماه</li>
-                        <li><a href="#" class="dropdown-item">فروردین</a></li>
-                        <li><a href="#" class="dropdown-item">اردیبهشت</a></li>
-                        <li><a href="#" class="dropdown-item">خرداد</a></li>
-                        <li><a href="#" class="dropdown-item">تیر</a></li>
-                        <li><a href="#" class="dropdown-item">مرداد</a></li>
-                        <li><a href="#" class="dropdown-item">شهریور</a></li>
-                        <li><a href="#" class="dropdown-item">مهر</a></li>
-                        <li><a href="#" class="dropdown-item active">آبان</a></li>
-                        <li><a href="#" class="dropdown-item">آذر</a></li>
-                        <li><a href="#" class="dropdown-item">دی</a></li>
-                        <li><a href="#" class="dropdown-item">بهمن</a></li>
-                        <li><a href="#" class="dropdown-item">اسفند</a></li>
+                      <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">August</a>
+                      <ul class="dropdown-menu dropdown-menu-sm">
+                        <li class="dropdown-title">Select Month</li>
+                        <li><a href="#" class="dropdown-item">January</a></li>
+                        <li><a href="#" class="dropdown-item">February</a></li>
+                        <li><a href="#" class="dropdown-item">March</a></li>
+                        <li><a href="#" class="dropdown-item">April</a></li>
+                        <li><a href="#" class="dropdown-item">May</a></li>
+                        <li><a href="#" class="dropdown-item">June</a></li>
+                        <li><a href="#" class="dropdown-item">July</a></li>
+                        <li><a href="#" class="dropdown-item active">August</a></li>
+                        <li><a href="#" class="dropdown-item">September</a></li>
+                        <li><a href="#" class="dropdown-item">October</a></li>
+                        <li><a href="#" class="dropdown-item">November</a></li>
+                        <li><a href="#" class="dropdown-item">December</a></li>
                       </ul>
                     </div>
                   </div>
                   <div class="card-stats-items">
                     <div class="card-stats-item">
                       <div class="card-stats-item-count">24</div>
-                      <div class="card-stats-item-label">جدید</div>
+                      <div class="card-stats-item-label">Pending</div>
                     </div>
                     <div class="card-stats-item">
                       <div class="card-stats-item-count">12</div>
-                      <div class="card-stats-item-label">در انبار</div>
+                      <div class="card-stats-item-label">Shipping</div>
                     </div>
                     <div class="card-stats-item">
                       <div class="card-stats-item-count">23</div>
-                      <div class="card-stats-item-label">ارسال شده</div>
+                      <div class="card-stats-item-label">Completed</div>
                     </div>
                   </div>
                 </div>
                 <div class="card-icon shadow-primary bg-primary">
                   <i class="fas fa-archive"></i>
                 </div>
-                <div class="card-wrap text-right">
+                <div class="card-wrap">
                   <div class="card-header">
-                    <h4>تعداد کل سفارش ها</h4>
+                    <h4>Total Orders</h4>
                   </div>
                   <div class="card-body">
-                    ۵۹
+                    59
                   </div>
                 </div>
               </div>
@@ -431,10 +466,10 @@
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>آمار برگشت کالا</h4>
+                    <h4>Balance</h4>
                   </div>
                   <div class="card-body">
-                    $۱۸۷,۱۳
+                    $187,13
                   </div>
                 </div>
               </div>
@@ -449,10 +484,10 @@
                 </div>
                 <div class="card-wrap">
                   <div class="card-header">
-                    <h4>فروش</h4>
+                    <h4>Sales</h4>
                   </div>
                   <div class="card-body">
-                    ۴,۷۵۸
+                    4,732
                   </div>
                 </div>
               </div>
@@ -462,7 +497,7 @@
             <div class="col-lg-8">
               <div class="card">
                 <div class="card-header">
-                  <h4>مقایسه کالاهای فروخته و برگشت داده شده</h4>
+                  <h4>Budget vs Sales</h4>
                 </div>
                 <div class="card-body">
                   <canvas id="myChart" height="158"></canvas>
@@ -472,101 +507,101 @@
             <div class="col-lg-4">
               <div class="card gradient-bottom">
                 <div class="card-header">
-                  <h4>۵ تا از برترین کالاها</h4>
+                  <h4>Top 5 Products</h4>
                   <div class="card-header-action dropdown">
-                    <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">ماهانه</a>
-                    <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-left text-center p-0">
-                      <li class="dropdown-title">انتخاب بازه زمانی</li>
-                      <li><a href="#" class="dropdown-item">روز</a></li>
-                      <li><a href="#" class="dropdown-item">هفته</a></li>
-                      <li><a href="#" class="dropdown-item active">ماه</a></li>
-                      <li><a href="#" class="dropdown-item">امسال</a></li>
+                    <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">Month</a>
+                    <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
+                      <li class="dropdown-title">Select Period</li>
+                      <li><a href="#" class="dropdown-item">Today</a></li>
+                      <li><a href="#" class="dropdown-item">Week</a></li>
+                      <li><a href="#" class="dropdown-item active">Month</a></li>
+                      <li><a href="#" class="dropdown-item">This Year</a></li>
                     </ul>
                   </div>
                 </div>
                 <div class="card-body" id="top-5-scroll">
-                  <ul class="list-unstyled list-unstyled-border text-right p-0">
+                  <ul class="list-unstyled list-unstyled-border">
                     <li class="media">
-                      <img class="ml-3 rounded" width="55" src="../assets/img/products/product-3-50.png" alt="product">
+                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-3-50.png" alt="product">
                       <div class="media-body">
-                        <div class="float-left"><div class="font-weight-600 text-muted text-small">۸۶ فروش</div></div>
-                        <div class="media-title">آیفون S9 پلاس</div>
+                        <div class="float-right"><div class="font-weight-600 text-muted text-small">86 Sales</div></div>
+                        <div class="media-title">oPhone S9 Limited</div>
                         <div class="mt-1">
                           <div class="budget-price">
                             <div class="budget-price-square bg-primary" data-width="64%"></div>
-                            <div class="budget-price-label">$۶۸,۷۱۴</div>
+                            <div class="budget-price-label">$68,714</div>
                           </div>
                           <div class="budget-price">
                             <div class="budget-price-square bg-danger" data-width="43%"></div>
-                            <div class="budget-price-label">$۳۸,۷۰۰</div>
+                            <div class="budget-price-label">$38,700</div>
                           </div>
                         </div>
                       </div>
                     </li>
                     <li class="media">
-                      <img class="ml-3 rounded" width="55" src="../assets/img/products/product-4-50.png" alt="product">
+                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-4-50.png" alt="product">
                       <div class="media-body">
-                        <div class="float-left"><div class="font-weight-600 text-muted text-small">۶۷ فروش</div></div>
-                        <div class="media-title">iBook Pro 2019</div>
+                        <div class="float-right"><div class="font-weight-600 text-muted text-small">67 Sales</div></div>
+                        <div class="media-title">iBook Pro 2018</div>
                         <div class="mt-1">
                           <div class="budget-price">
                             <div class="budget-price-square bg-primary" data-width="84%"></div>
-                            <div class="budget-price-label">$۱۰۷,۱۳۵</div>
+                            <div class="budget-price-label">$107,133</div>
                           </div>
                           <div class="budget-price">
                             <div class="budget-price-square bg-danger" data-width="60%"></div>
-                            <div class="budget-price-label">$۹۱,۴۵۵</div>
+                            <div class="budget-price-label">$91,455</div>
                           </div>
                         </div>
                       </div>
                     </li>
                     <li class="media">
-                      <img class="ml-3 rounded" width="55" src="../assets/img/products/product-1-50.png" alt="product">
+                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-1-50.png" alt="product">
                       <div class="media-body">
-                        <div class="float-left"><div class="font-weight-600 text-muted text-small">۶۳ فروش</div></div>
-                        <div class="media-title">هدفون Beats</div>
+                        <div class="float-right"><div class="font-weight-600 text-muted text-small">63 Sales</div></div>
+                        <div class="media-title">Headphone Blitz</div>
                         <div class="mt-1">
                           <div class="budget-price">
                             <div class="budget-price-square bg-primary" data-width="34%"></div>
-                            <div class="budget-price-label">$۳,۷۱۷</div>
+                            <div class="budget-price-label">$3,717</div>
                           </div>
                           <div class="budget-price">
                             <div class="budget-price-square bg-danger" data-width="28%"></div>
-                            <div class="budget-price-label">$۲,۸۳۵</div>
+                            <div class="budget-price-label">$2,835</div>
                           </div>
                         </div>
                       </div>
                     </li>
                     <li class="media">
-                      <img class="ml-3 rounded" width="55" src="../assets/img/products/product-3-50.png" alt="product">
+                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-3-50.png" alt="product">
                       <div class="media-body">
-                        <div class="float-left"><div class="font-weight-600 text-muted text-small">28 Sales</div></div>
-                        <div class="media-title">آیفون لایت</div>
+                        <div class="float-right"><div class="font-weight-600 text-muted text-small">28 Sales</div></div>
+                        <div class="media-title">oPhone X Lite</div>
                         <div class="mt-1">
                           <div class="budget-price">
                             <div class="budget-price-square bg-primary" data-width="45%"></div>
-                            <div class="budget-price-label">$۱۳,۹۷۲</div>
+                            <div class="budget-price-label">$13,972</div>
                           </div>
                           <div class="budget-price">
                             <div class="budget-price-square bg-danger" data-width="30%"></div>
-                            <div class="budget-price-label">$۹,۶۶۰</div>
+                            <div class="budget-price-label">$9,660</div>
                           </div>
                         </div>
                       </div>
                     </li>
                     <li class="media">
-                      <img class="ml-3 rounded" width="55" src="../assets/img/products/product-5-50.png" alt="product">
+                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-5-50.png" alt="product">
                       <div class="media-body">
-                        <div class="float-left"><div class="font-weight-600 text-muted text-small">19 Sales</div></div>
-                        <div class="media-title">دوربین عکاسی</div>
+                        <div class="float-right"><div class="font-weight-600 text-muted text-small">19 Sales</div></div>
+                        <div class="media-title">Old Camera</div>
                         <div class="mt-1">
                           <div class="budget-price">
                             <div class="budget-price-square bg-primary" data-width="35%"></div>
-                            <div class="budget-price-label">$۷,۳۹۱</div>
+                            <div class="budget-price-label">$7,391</div>
                           </div>
                           <div class="budget-price">
                             <div class="budget-price-square bg-danger" data-width="28%"></div>
-                            <div class="budget-price-label">$۵,۴۷۲</div>
+                            <div class="budget-price-label">$5,472</div>
                           </div>
                         </div>
                       </div>
@@ -576,11 +611,11 @@
                 <div class="card-footer pt-3 d-flex justify-content-center">
                   <div class="budget-price justify-content-center">
                     <div class="budget-price-square bg-primary" data-width="20"></div>
-                    <div class="budget-price-label">مبلغ فروش</div>
+                    <div class="budget-price-label">Selling Price</div>
                   </div>
                   <div class="budget-price justify-content-center">
                     <div class="budget-price-square bg-danger" data-width="20"></div>
-                    <div class="budget-price-label">ضرر برگشت کالا</div>
+                    <div class="budget-price-label">Budget Price</div>
                   </div>
                 </div>
               </div>
@@ -590,7 +625,7 @@
             <div class="col-md-6">
               <div class="card">
                 <div class="card-header">
-                  <h4>بهترین محصولات</h4>
+                  <h4>Best Products</h4>
                 </div>
                 <div class="card-body">
                   <div class="owl-carousel owl-theme" id="products-carousel">
@@ -600,7 +635,7 @@
                           <img alt="image" src="../assets/img/products/product-4-50.png" class="img-fluid">
                         </div>
                         <div class="product-details">
-                          <div class="product-name">مک بوک ۲۰۱۹</div>
+                          <div class="product-name">iBook Pro 2018</div>
                           <div class="product-review">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
@@ -608,11 +643,11 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                           </div>
-                          <div class="text-muted text-small">۶۷ فروش</div>
+                          <div class="text-muted text-small">67 Sales</div>
                           <div class="product-cta">
-                            <a href="#" class="btn btn-primary">جزئیات</a>
+                            <a href="#" class="btn btn-primary">Detail</a>
                           </div>
-                        </div>  
+                        </div>
                       </div>
                     </div>
                     <div>
@@ -621,19 +656,19 @@
                           <img alt="image" src="../assets/img/products/product-3-50.png" class="img-fluid">
                         </div>
                         <div class="product-details">
-                          <div class="product-name">آیفون 5S</div>
+                          <div class="product-name">oPhone S9 Limited</div>
                           <div class="product-review">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                             <i class="fas fa-star-half"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
                           </div>
-                          <div class="text-muted text-small">۸۶ فروش</div>
+                          <div class="text-muted text-small">86 Sales</div>
                           <div class="product-cta">
-                            <a href="#" class="btn btn-primary">توضیحات</a>
+                            <a href="#" class="btn btn-primary">Detail</a>
                           </div>
-                        </div>  
+                        </div>
                       </div>
                     </div>
                     <div>
@@ -642,19 +677,19 @@
                           <img alt="image" src="../assets/img/products/product-1-50.png" class="img-fluid">
                         </div>
                         <div class="product-details">
-                          <div class="product-name">هدفون Beats</div>
+                          <div class="product-name">Headphone Blitz</div>
                           <div class="product-review">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
                           </div>
-                          <div class="text-muted text-small">۶۳ فروش</div>
+                          <div class="text-muted text-small">63 Sales</div>
                           <div class="product-cta">
-                            <a href="#" class="btn btn-primary">توضیحات</a>
+                            <a href="#" class="btn btn-primary">Detail</a>
                           </div>
-                        </div>  
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -664,58 +699,58 @@
             <div class="col-md-6">
               <div class="card">
                 <div class="card-header">
-                  <h4>کشورهای برتر</h4>
+                  <h4>Top Countries</h4>
                 </div>
-                <div class="card-body text-right">
+                <div class="card-body">
                   <div class="row">
                     <div class="col-sm-6">
-                      <div class="text-title mb-2">مرداد</div>
-                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0 p-0">
+                      <div class="text-title mb-2">July</div>
+                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0">
                         <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../assets/modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
-                          <div class="media-body mr-3">
-                            <div class="media-title">اندونزی</div>
-                            <div class="text-small text-muted">۳,۲۸۶ <i class="fas fa-caret-down text-danger"></i></div>
+                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
+                          <div class="media-body ml-3">
+                            <div class="media-title">Indonesia</div>
+                            <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
                           </div>
                         </li>
                         <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../assets/modules/flag-icon-css/flags/4x3/my.svg" alt="image" width="40">
-                          <div class="media-body mr-3">
-                            <div class="media-title">مالزی</div>
-                            <div class="text-small text-muted">۵,۶۴۸ <i class="fas fa-caret-down text-danger"></i></div>
+                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/my.svg" alt="image" width="40">
+                          <div class="media-body ml-3">
+                            <div class="media-title">Malaysia</div>
+                            <div class="text-small text-muted">2,976 <i class="fas fa-caret-down text-danger"></i></div>
                           </div>
                         </li>
                         <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../assets/modules/flag-icon-css/flags/4x3/us.svg" alt="image" width="40">
-                          <div class="media-body mr-3">
-                            <div class="media-title">ایالات متحده</div>
-                            <div class="text-small text-muted">۱,۵۷۶ <i class="fas fa-caret-up text-success"></i></div>
+                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/us.svg" alt="image" width="40">
+                          <div class="media-body ml-3">
+                            <div class="media-title">United States</div>
+                            <div class="text-small text-muted">1,576 <i class="fas fa-caret-up text-success"></i></div>
                           </div>
                         </li>
                       </ul>
                     </div>
                     <div class="col-sm-6 mt-sm-0 mt-4">
-                      <div class="text-title mb-2">شهریور</div>
-                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0 p-0">
+                      <div class="text-title mb-2">August</div>
+                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0">
                         <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../assets/modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
-                          <div class="media-body mr-3">
-                            <div class="media-title">اندونزی</div>
-                            <div class="text-small text-muted">۱,۴۸۶ <i class="fas fa-caret-up text-success"></i></div>
+                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
+                          <div class="media-body ml-3">
+                            <div class="media-title">Indonesia</div>
+                            <div class="text-small text-muted">3,486 <i class="fas fa-caret-up text-success"></i></div>
                           </div>
                         </li>
                         <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../assets/modules/flag-icon-css/flags/4x3/ps.svg" alt="image" width="40">
-                          <div class="media-body mr-3">
-                            <div class="media-title">ایران</div>
-                            <div class="text-small text-muted">۳,۱۸۲ <i class="fas fa-caret-up text-success"></i></div>
+                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/ps.svg" alt="image" width="40">
+                          <div class="media-body ml-3">
+                            <div class="media-title">Palestine</div>
+                            <div class="text-small text-muted">3,182 <i class="fas fa-caret-up text-success"></i></div>
                           </div>
                         </li>
                         <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../assets/modules/flag-icon-css/flags/4x3/de.svg" alt="image" width="40">
-                          <div class="media-body mr-3">
-                            <div class="media-title">آلمان</div>
-                            <div class="text-small text-muted">۵,۶۵۴ <i class="fas fa-caret-down text-danger"></i></div>
+                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/de.svg" alt="image" width="40">
+                          <div class="media-body ml-3">
+                            <div class="media-title">Germany</div>
+                            <div class="text-small text-muted">2,317 <i class="fas fa-caret-down text-danger"></i></div>
                           </div>
                         </li>
                       </ul>
@@ -729,64 +764,64 @@
             <div class="col-md-8">
               <div class="card">
                 <div class="card-header">
-                  <h4>صورتحساب ها</h4>
+                  <h4>Invoices</h4>
                   <div class="card-header-action">
-                    <a href="#" class="btn btn-danger"> مشاهده همه <i class="fas fa-chevron-left"></i></a>
+                    <a href="#" class="btn btn-danger">View More <i class="fas fa-chevron-right"></i></a>
                   </div>
                 </div>
                 <div class="card-body p-0">
-                  <div class="table-responsive table-invoice text-right">
+                  <div class="table-responsive table-invoice">
                     <table class="table table-striped">
                       <tr>
-                        <th>شماره صورتحساب</th>
-                        <th>مشتری</th>
-                        <th>وضعیت</th>
-                        <th>تاریخ سررسید</th>
-                        <th>عملیات</th>
+                        <th>Invoice ID</th>
+                        <th>Customer</th>
+                        <th>Status</th>
+                        <th>Due Date</th>
+                        <th>Action</th>
                       </tr>
                       <tr>
-                        <td><a href="#">BMI-87239</a></td>
-                        <td class="font-weight-600">مهدی خانزادی</td>
-                        <td><div class="badge badge-warning">پرداخت نشده</div></td>
-                        <td>۱۹ مرداد, ۱۳۹۸</td>
+                        <td><a href="#">INV-87239</a></td>
+                        <td class="font-weight-600">Kusnadi</td>
+                        <td><div class="badge badge-warning">Unpaid</div></td>
+                        <td>July 19, 2018</td>
                         <td>
-                          <a href="#" class="btn btn-primary">مشاهده جزئیات</a>
+                          <a href="#" class="btn btn-primary">Detail</a>
                         </td>
                       </tr>
                       <tr>
-                        <td><a href="#">BMI-48574</a></td>
-                        <td class="font-weight-600">مهیار انصاری</td>
-                        <td><div class="badge badge-success">پرداخت شده</div></td>
-                        <td>۲۵ مرداد, ۱۳۹۸</td>
+                        <td><a href="#">INV-48574</a></td>
+                        <td class="font-weight-600">Hasan Basri</td>
+                        <td><div class="badge badge-success">Paid</div></td>
+                        <td>July 21, 2018</td>
                         <td>
-                          <a href="#" class="btn btn-primary">مشاهده جزئیات</a>
+                          <a href="#" class="btn btn-primary">Detail</a>
                         </td>
                       </tr>
                       <tr>
-                        <td><a href="#">BMI-76824</a></td>
-                        <td class="font-weight-600">هاشم مقدری</td>
-                        <td><div class="badge badge-warning">پرداخت نشده</div></td>
-                        <td>۲۵ فروردین, ۱۳۹۸</td>
+                        <td><a href="#">INV-76824</a></td>
+                        <td class="font-weight-600">Muhamad Nuruzzaki</td>
+                        <td><div class="badge badge-warning">Unpaid</div></td>
+                        <td>July 22, 2018</td>
                         <td>
-                          <a href="#" class="btn btn-primary">مشاهده جزئیات</a>
+                          <a href="#" class="btn btn-primary">Detail</a>
                         </td>
                       </tr>
                       <tr>
-                        <td><a href="#">BMI-84990</a></td>
-                        <td class="font-weight-600">علی نظری</td>
-                        <td><div class="badge badge-warning">پرداخت شده</div></td>
-                        <td>۲۵ مرداد, ۱۳۹۸</td>
+                        <td><a href="#">INV-84990</a></td>
+                        <td class="font-weight-600">Agung Ardiansyah</td>
+                        <td><div class="badge badge-warning">Unpaid</div></td>
+                        <td>July 22, 2018</td>
                         <td>
-                          <a href="#" class="btn btn-primary">مشاهده جزئیات</a>
+                          <a href="#" class="btn btn-primary">Detail</a>
                         </td>
                       </tr>
                       <tr>
-                        <td><a href="#">BMI-87320</a></td>
-                        <td class="font-weight-600">محمدرضا ملک</td>
-                        <td><div class="badge badge-success">پرداخت نشده</div></td>
-                        <td>۲۵ مرداد, ۱۳۹۸</td>
+                        <td><a href="#">INV-87320</a></td>
+                        <td class="font-weight-600">Ardian Rahardiansyah</td>
+                        <td><div class="badge badge-success">Paid</div></td>
+                        <td>July 28, 2018</td>
                         <td>
-                          <a href="#" class="btn btn-primary">مشاهده جزئیات</a>
+                          <a href="#" class="btn btn-primary">Detail</a>
                         </td>
                       </tr>
                     </table>
@@ -796,47 +831,47 @@
             </div>
             <div class="col-md-4">
               <div class="card card-hero">
-                <div class="card-header text-right">
+                <div class="card-header">
                   <div class="card-icon">
                     <i class="far fa-question-circle"></i>
                   </div>
-                  <h4>۱۴</h4>
-                  <div class="card-description">تیکت های ارسال شده</div>
+                  <h4>14</h4>
+                  <div class="card-description">Customers need help</div>
                 </div>
-                <div class="card-body p-0 text-right">
+                <div class="card-body p-0">
                   <div class="tickets-list">
                     <a href="#" class="ticket-item">
                       <div class="ticket-title">
-                        <h4>سفارش من هنوز ارسال نشده؟</h4>
+                        <h4>My order hasn't arrived yet</h4>
                       </div>
                       <div class="ticket-info">
-                        <div>علی عباسی</div>
+                        <div>Laila Tazkiah</div>
                         <div class="bullet"></div>
-                        <div class="text-primary">۱ دقیقه قبل</div>
+                        <div class="text-primary">1 min ago</div>
                       </div>
                     </a>
                     <a href="#" class="ticket-item">
                       <div class="ticket-title">
-                        <h4>لطفا سفارش من رو لغو کنید</h4>
+                        <h4>Please cancel my order</h4>
                       </div>
                       <div class="ticket-info">
-                        <div>عاطفه سویضی</div>
+                        <div>Rizal Fakhri</div>
                         <div class="bullet"></div>
-                        <div>دو ساعت پیش</div>
+                        <div>2 hours ago</div>
                       </div>
                     </a>
                     <a href="#" class="ticket-item">
                       <div class="ticket-title">
-                        <h4>فشارسنجی که فرستادید شکسته بود</h4>
+                        <h4>Do you see my mother?</h4>
                       </div>
                       <div class="ticket-info">
-                        <div>هاشم مقدری</div>
+                        <div>Syahdan Ubaidillah</div>
                         <div class="bullet"></div>
-                        <div>۶ ساعت پیش</div>
+                        <div>6 hours ago</div>
                       </div>
                     </a>
                     <a href="features-tickets.html" class="ticket-item ticket-more">
-                      نمایش همه <i class="fas fa-chevron-left"></i>
+                      View All <i class="fas fa-chevron-right"></i>
                     </a>
                   </div>
                 </div>
@@ -846,37 +881,40 @@
         </section>
       </div>
       <footer class="main-footer">
-        <div class="footer-left">
+        <div class="footer-left col-md-6">
           Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
         </div>
-        <div class="footer-right">
+        <div class="footer-right col-md-3">
+          2.3.0
+        </div>
 
+        <div class="col-md-12">
+          Distributed by <a href="https://themewagon.com/">Themewagon</a>
         </div>
       </footer>
     </div>
   </div>
 
   <!-- General JS Scripts -->
-  <script src="../assets/modules/jquery.min.js"></script>
-  <script src="../assets/modules/popper.js"></script>
-  <script src="../assets/modules/tooltip.js"></script>
-  <script src="../assets/modules/bootstrap/js/bootstrap.min.js"></script>
-  <script src="../assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
-  <script src="../assets/modules/moment.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="../assets/js/stisla.js"></script>
-  
-  <!-- JS Libraies -->
-  <script src="../assets/modules/jquery.sparkline.min.js"></script>
-  <script src="../assets/modules/chart.min.js"></script>
-  <script src="../assets/modules/owlcarousel2/dist/owl.carousel.min.js"></script>
-  <script src="../assets/modules/summernote/summernote-bs4.js"></script>
-  <script src="../assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
 
-  <!-- Page Specific JS File -->
-  <script src="../assets/js/page/index.js"></script>
-  
+  <!-- JS Libraies -->
+  <script src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
+  <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+  <script src="../node_modules/summernote/dist/summernote-bs4.js"></script>
+  <script src="../node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+
   <!-- Template JS File -->
   <script src="../assets/js/scripts.js"></script>
   <script src="../assets/js/custom.js"></script>
+
+  <!-- Page Specific JS File -->
+  <script src="../assets/js/page/index.js"></script>
 </body>
 </html>
