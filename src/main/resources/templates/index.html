@@ -1,882 +1,759 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Ecommerce Dashboard &mdash; Stisla</title>
 
-  <!-- General CSS Files -->
-  <link rel="stylesheet" href="/stisla/assets/modules/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/stisla/assets/modules/fontawesome/css/all.min.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
 
-  <!-- CSS Libraries -->
-  <link rel="stylesheet" href="/stisla/assets/modules/jqvmap/dist/jqvmap.min.css">
-  <link rel="stylesheet" href="/stisla/assets/modules/summernote/summernote-bs4.css">
-  <link rel="stylesheet" href="/stisla/assets/modules/owlcarousel2/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="/stisla/assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css">
+    <title>SB Admin 2 - Dashboard</title>
 
-  <!-- Template CSS -->
-  <link rel="stylesheet" href="/stisla/assets/css/style.css">
-  <link rel="stylesheet" href="/stisla/assets/css/components.css">
-  <link rel="stylesheet" href="/stisla/assets/css/rtl.css">
+    <!-- Custom fonts for this template-->
+    <link th:href="@{/bootstrap/vendor/fontawesome-free/css/all.min.css}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link th:href="@{/bootstrap/css/sb-admin-2.min.css}" rel="stylesheet">
+
 </head>
 
-<body>
-  <div id="app">
-    <div class="main-wrapper main-wrapper-1">
-      <div class="navbar-bg"></div>
-      <nav class="navbar navbar-expand-lg main-navbar">
-        <form class="form-inline ml-auto">
-          <ul class="navbar-nav ml-3">
-            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
-            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
-          </ul>
-          <div class="search-element text-right">
-            <input class="form-control" type="search" placeholder="جستجو" aria-label="Search" data-width="250">
-            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
-            <div class="search-backdrop"></div>
-            <div class="search-result">
-              <div class="search-header">
-                نتیجه جستجو
-              </div>
-              <div class="search-item">
-                <a href="#">چگونه ناسا رو هک کنیم؟</a>
-                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-              </div>
-              <div class="search-item">
-                <a href="#">Kodinger.com</a>
-                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-              </div>
-              <div class="search-item">
-                <a href="#">پنل مدیریت</a>
-                <a href="#" class="search-close"><i class="fas fa-times"></i></a>
-              </div>
-              <div class="search-header">
-                نتایج
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <img class="ml-3 rounded" width="30" src="../assets/img/products/product-3-50.png" alt="product">
-                  آیفون s9 تولید شد
-                </a>
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <img class="ml-3 rounded" width="30" src="../assets/img/products/product-2-50.png" alt="product">
-                  چه شادی هایی که زیر پای انسانها سرکوب شدند
-                </a>
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <img class="ml-3 rounded" width="30" src="../assets/img/products/product-1-50.png" alt="product">
-                  لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.
-                </a>
-              </div>
-              <div class="search-header">
-                پروژه ها
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <div class="search-icon bg-danger text-white ml-3">
-                    <i class="fas fa-code"></i>
-                  </div>
-                  متریال ادمین پنل
-                </a>
-              </div>
-              <div class="search-item">
-                <a href="#">
-                  <div class="search-icon bg-primary text-white ml-3">
-                    <i class="fas fa-laptop"></i>
-                  </div>
-                  ایجاد صفحه لندینگ
-                </a>
-              </div>
-            </div>
-          </div>
-        </form>
-        <ul class="navbar-nav navbar-right">
-          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
-            <div class="dropdown-menu dropdown-list text-right dropdown-menu-left">
-              <div class="dropdown-header">پیام ها
-                <div class="float-left">
-                  <a href="#">علامتگذاری همه بصورت خوانده شده</a>
-                </div>
-              </div>
-              <div class="dropdown-list-content dropdown-list-message">
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle">
-                    <div class="is-online"></div>
-                  </div>
-                  <div class="dropdown-item-desc text-right">
-                    <b>مهدی خانزادی</b>
-                    <p>سلام داداچ!</p>
-                    <div class="time">۱۰ ساعت پیش</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-2.png" class="rounded-circle">
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>مهیار انصاری</b>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.</p>
-                    <div class="time">۱۲ ساعت پیش</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-3.png" class="rounded-circle">
-                    <div class="is-online"></div>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>آمیتا پاچان</b>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.</p>
-                    <div class="time">۱۲ ساعت پیش</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-4.png" class="rounded-circle">
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>مهدی خانزادی</b>
-                    <p>سلام سیستم پشتیبانی پاترونیک رو استفاده کنید</p>
-                    <div class="time">۱۶ ساعت پیش</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-avatar">
-                    <img alt="image" src="../assets/img/avatar/avatar-5.png" class="rounded-circle">
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>لورم ایپسوم</b>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ.</p>
-                    <div class="time">دیروز</div>
-                  </div>
-                </a>
-              </div>
-              <div class="dropdown-footer text-center">
-                <a href="#"> دیدن همه پیام ها<i class="fas fa-chevron-left"></i></a>
-              </div>
-            </div>
-          </li>
-          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
-            <div class="dropdown-menu dropdown-list dropdown-menu-left">
-              <div class="dropdown-header text-right">نوتیفیکیشن ها
-                <div class="float-left">
-                  <a href="#"> علامتگذاری همه بصورت خوانده شده</a>
-                </div>
-              </div>
-              <div class="dropdown-list-content dropdown-list-icons text-right">
-                <a href="#" class="dropdown-item dropdown-item-unread">
-                  <div class="dropdown-item-icon bg-primary text-white">
-                    <i class="fas fa-code"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    قالب مدیریتی متریال اپدیت جدید داد!
-                    <div class="time text-primary">۲ دقیقه پیش</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-info text-white">
-                    <i class="far fa-user"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>شما</b> و <b>مهیار انصاری</b> هم اکنون همکار هستید.
-                    <div class="time">۱۰ ساعت پیش</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-success text-white">
-                    <i class="fas fa-check"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    <b>مهدی خانزادی</b> اطلاعات مرتبط با <b>قالب</b> را <b>آپلود کرد.</b>
-                    <div class="time">۱۲ ساعت پیش</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-danger text-white">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    فضای هارد دیسک پر شده است لطفا آن را خالی کنید.
-                    <div class="time">۱۷ ساعت پیش</div>
-                  </div>
-                </a>
-                <a href="#" class="dropdown-item">
-                  <div class="dropdown-item-icon bg-info text-white">
-                    <i class="fas fa-bell"></i>
-                  </div>
-                  <div class="dropdown-item-desc">
-                    به قالب متریال خوش آمدید
-                    <div class="time">دیروز</div>
-                  </div>
-                </a>
-              </div>
-              <div class="dropdown-footer text-center">
-                <a href="#">
-                  <span>نمایش همه</span>
-                  <i class="fas fa-chevron-left"></i>
-                </a>
-              </div>
-            </div>
-          </li>
-          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-            <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
-            <div class="d-sm-none d-lg-inline-block">سلام مهدی</div></a>
-            <div class="dropdown-menu dropdown-menu-right text-right">
-              <div class="dropdown-title text-center">۵ دقیقه پیش لاگین کردین</div>
-              <a href="features-profile.html" class="dropdown-item has-icon">
-                <span>پروفایل</span>
-                <i class="far fa-user"></i>
-              </a>
-              <a href="features-activities.html" class="dropdown-item has-icon">
-                <span>فعالیت ها</span>
-                <i class="fas fa-bolt"></i>
-              </a>
-              <a href="features-settings.html" class="dropdown-item has-icon">
-                <span>تنظیمات</span>
-                <i class="fas fa-cog"></i>
-              </a>
-              <div class="dropdown-divider"></div>
-              <a href="#" class="dropdown-item has-icon text-danger">
-                <span>خروج</span>
-                <i class="fas fa-sign-out-alt"></i>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </nav>
-      <div class="main-sidebar sidebar-style-2">
-        <aside id="sidebar-wrapper">
-          <div class="sidebar-brand">
-            <a href="index.html">مدیریت پاترونیک</a>
-          </div>
-          <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">مدیریت فروش</a>
-          </div>
-          <ul class="sidebar-menu">
-            <li class="menu-header">داشبورد</li>
-            <li class="dropdown active">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>داشبورد</span></a>
-              <ul class="dropdown-menu">
-                <li class=active><a class="nav-link" href="index-0.html">داشبورد عمومی</a></li>
-                <li><a class="nav-link" href="index.html">داشبورد فروش محصولات</a></li>
-              </ul>
-            </li>
-            <li class="menu-header">امکانات بیشتر</li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>صفحه بندی</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="layout-default.html">حالت پیش فرض</a></li>
-                <li><a class="nav-link" href="layout-transparent.html">سایدبار بدون رنگ</a></li>
-                <li><a class="nav-link" href="layout-top-navigation.html">نویگیشن بالا</a></li>
-              </ul>
-            </li>
-            <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>صفحه خالی</span></a></li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>بوت استرپ</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="bootstrap-alert.html">آلرت</a></li>
-                <li><a class="nav-link" href="bootstrap-badge.html">بدج</a></li>
-                <li><a class="nav-link" href="bootstrap-breadcrumb.html">بردکرامپ</a></li>
-                <li><a class="nav-link" href="bootstrap-buttons.html">دکمه ها</a></li>
-                <li><a class="nav-link" href="bootstrap-card.html">کارت</a></li>
-                <li><a class="nav-link" href="bootstrap-carousel.html">کروسل</a></li>
-                <li><a class="nav-link" href="bootstrap-collapse.html">کولاپس</a></li>
-                <li><a class="nav-link" href="bootstrap-dropdown.html">دراپ دون</a></li>
-                <li><a class="nav-link" href="bootstrap-form.html">فرم</a></li>
-                <li><a class="nav-link" href="bootstrap-list-group.html">لیست گروه</a></li>
-                <li><a class="nav-link" href="bootstrap-media-object.html">مدیا ابجکت</a></li>
-                <li><a class="nav-link" href="bootstrap-modal.html">مودال</a></li>
-                <li><a class="nav-link" href="bootstrap-nav.html">نویگیشن</a></li>
-                <li><a class="nav-link" href="bootstrap-navbar.html">نوبار</a></li>
-                <li><a class="nav-link" href="bootstrap-pagination.html">پجینیشن</a></li>
-                <li><a class="nav-link" href="bootstrap-popover.html">پاپ اور</a></li>
-                <li><a class="nav-link" href="bootstrap-progress.html">پراگرس</a></li>
-                <li><a class="nav-link" href="bootstrap-table.html">جدول</a></li>
-                <li><a class="nav-link" href="bootstrap-tooltip.html">تولتیپ</a></li>
-                <li><a class="nav-link" href="bootstrap-typography.html">تایپوگرافی</a></li>
-              </ul>
-            </li>
-            <li class="menu-header">امکانات دیگر</li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>کامپوننت ها</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="components-gallery.html">گالری</a></li>
-                <li><a class="nav-link" href="components-multiple-upload.html">مولتی آپلود</a></li>
-                <li><a class="nav-link" href="components-tab.html">تب</a></li>
-                <li><a class="nav-link" href="components-table.html">جدول</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>فرم ها</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="forms-advanced-form.html">فرم پیشرفته</a></li>
-                <li><a class="nav-link" href="forms-editor.html">ویرایشگر</a></li>
-                <li><a class="nav-link" href="forms-validation.html">ولیدیشن</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-plug"></i> <span>ماژول ها</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="modules-calendar.html">تقویم</a></li>
-                <li><a class="nav-link" href="modules-chartjs.html">چارت ها</a></li>
-                <li><a class="nav-link" href="modules-datatables.html">دیتاتیبل</a></li>
-                <li><a class="nav-link" href="modules-flag.html">پرچم</a></li>
-                <li><a class="nav-link" href="modules-font-awesome.html">فونت اوسوم</a></li>
-                <li><a class="nav-link" href="modules-ion-icons.html">ای او ن ایکون</a></li>
-                <li><a class="nav-link" href="modules-owl-carousel.html">اول کراسول</a></li>
-                <li><a class="nav-link" href="modules-sparkline.html">اسپارک لاین</a></li>
-                <li><a class="nav-link" href="modules-sweet-alert.html">سویت الرت</a></li>
-                <li><a class="nav-link" href="modules-toastr.html">توستر</a></li>
-                <li><a class="nav-link" href="modules-vector-map.html">وکتور مپ</a></li>
-                <li><a class="nav-link" href="modules-weather-icon.html">ایکن اب و هوا</a></li>
-              </ul>
-            </li>
-            <li class="menu-header">صفحات</li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i> <span>ثبت نام</span></a>
-              <ul class="dropdown-menu">
-                <li><a href="auth-forgot-password.html">فراموشی کلمه عبور</a></li>
-                <li><a href="auth-login.html">لاگین</a></li>
-                <li><a href="auth-register.html">ثبت نام</a></li>
-                <li><a href="auth-reset-password.html">بازیابی کلمه عبور</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="nav-link has-dropdown"><i class="fas fa-exclamation"></i> <span>خطاها</span></a>
-              <ul class="dropdown-menu">
-                <li><a class="nav-link" href="errors-503.html">503</a></li>
-                <li><a class="nav-link" href="errors-403.html">403</a></li>
-                <li><a class="nav-link" href="errors-404.html">404</a></li>
-                <li><a class="nav-link" href="errors-500.html">500</a></li>
-              </ul>
-            </li>
-            <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>سازنده ها</span></a></li>
-          </ul>
+<body id="page-top">
 
-          <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
-              <a href="https://getstisla.com/docs" class="btn btn-primary btn-lg btn-block btn-icon-split">
-              <i class="fas fa-rocket"></i> مستندات قالب
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
             </a>
-          </div>
-        </aside>
-      </div>
 
-      <!-- Main Content -->
-      <div class="main-content">
-        <section class="section">
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-stats text-right">
-                  <div class="card-stats-title">آمار سفارش -
-                    <div class="dropdown d-inline">
-                      <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">فروردین</a>
-                      <ul class="dropdown-menu dropdown-menu-right p-0 dropdown-menu-sm text-right">
-                        <li class="dropdown-title">انتخاب ماه</li>
-                        <li><a href="#" class="dropdown-item">فروردین</a></li>
-                        <li><a href="#" class="dropdown-item">اردیبهشت</a></li>
-                        <li><a href="#" class="dropdown-item">خرداد</a></li>
-                        <li><a href="#" class="dropdown-item">تیر</a></li>
-                        <li><a href="#" class="dropdown-item">مرداد</a></li>
-                        <li><a href="#" class="dropdown-item">شهریور</a></li>
-                        <li><a href="#" class="dropdown-item">مهر</a></li>
-                        <li><a href="#" class="dropdown-item active">آبان</a></li>
-                        <li><a href="#" class="dropdown-item">آذر</a></li>
-                        <li><a href="#" class="dropdown-item">دی</a></li>
-                        <li><a href="#" class="dropdown-item">بهمن</a></li>
-                        <li><a href="#" class="dropdown-item">اسفند</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="card-stats-items">
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">24</div>
-                      <div class="card-stats-item-label">جدید</div>
-                    </div>
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">12</div>
-                      <div class="card-stats-item-label">در انبار</div>
-                    </div>
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">23</div>
-                      <div class="card-stats-item-label">ارسال شده</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-archive"></i>
-                </div>
-                <div class="card-wrap text-right">
-                  <div class="card-header">
-                    <h4>تعداد کل سفارش ها</h4>
-                  </div>
-                  <div class="card-body">
-                    ۵۹
-                  </div>
-                </div>
-              </div>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="index.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Interface
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-chart">
-                  <canvas id="balance-chart" height="80"></canvas>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-fw fa-cog"></i>
+                    <span>Components</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Components:</h6>
+                        <a class="collapse-item" href="buttons.html">Buttons</a>
+                        <a class="collapse-item" href="cards.html">Cards</a>
+                    </div>
                 </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-dollar-sign"></i>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Utilities</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Colors</a>
+                        <a class="collapse-item" href="utilities-border.html">Borders</a>
+                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
                 </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>آمار برگشت کالا</h4>
-                  </div>
-                  <div class="card-body">
-                    $۱۸۷,۱۳
-                  </div>
-                </div>
-              </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Addons
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-chart">
-                  <canvas id="sales-chart" height="80"></canvas>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                    aria-expanded="true" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Pages</span>
+                </a>
+                <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Login Screens:</h6>
+                        <a class="collapse-item" href="login.html">Login</a>
+                        <a class="collapse-item" href="register.html">Register</a>
+                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <div class="collapse-divider"></div>
+                        <h6 class="collapse-header">Other Pages:</h6>
+                        <a class="collapse-item" href="404.html">404 Page</a>
+                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                    </div>
                 </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-shopping-bag"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>فروش</h4>
-                  </div>
-                  <div class="card-body">
-                    ۴,۷۵۸
-                  </div>
-                </div>
-              </div>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="charts.html">
+                    <i class="fas fa-fw fa-chart-area"></i>
+                    <span>Charts</span></a>
+            </li>
+
+            <!-- Nav Item - Tables -->
+            <li class="nav-item">
+                <a class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>Tables</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="card">
-                <div class="card-header">
-                  <h4>مقایسه کالاهای فروخته و برگشت داده شده</h4>
-                </div>
-                <div class="card-body">
-                  <canvas id="myChart" height="158"></canvas>
-                </div>
-              </div>
+
+            <!-- Sidebar Message -->
+            <div class="sidebar-card d-none d-lg-flex">
+                <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
+                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
+                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
             </div>
-            <div class="col-lg-4">
-              <div class="card gradient-bottom">
-                <div class="card-header">
-                  <h4>۵ تا از برترین کالاها</h4>
-                  <div class="card-header-action dropdown">
-                    <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">ماهانه</a>
-                    <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-left text-center p-0">
-                      <li class="dropdown-title">انتخاب بازه زمانی</li>
-                      <li><a href="#" class="dropdown-item">روز</a></li>
-                      <li><a href="#" class="dropdown-item">هفته</a></li>
-                      <li><a href="#" class="dropdown-item active">ماه</a></li>
-                      <li><a href="#" class="dropdown-item">امسال</a></li>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Search -->
+                    <form
+                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                                aria-label="Search" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">
+                                    <i class="fas fa-search fa-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Alerts -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-bell fa-fw"></i>
+                                <!-- Counter - Alerts -->
+                                <span class="badge badge-danger badge-counter">3+</span>
+                            </a>
+                            <!-- Dropdown - Alerts -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="alertsDropdown">
+                                <h6 class="dropdown-header">
+                                    Alerts Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-primary">
+                                            <i class="fas fa-file-alt text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-success">
+                                            <i class="fas fa-donate text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 7, 2019</div>
+                                        $290.29 has been deposited into your account!
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="mr-3">
+                                        <div class="icon-circle bg-warning">
+                                            <i class="fas fa-exclamation-triangle text-white"></i>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="small text-gray-500">December 2, 2019</div>
+                                        Spending Alert: We've noticed unusually high spending for your account.
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                            </div>
+                        </li>
+
+                        <!-- Nav Item - Messages -->
+                        <li class="nav-item dropdown no-arrow mx-1">
+                            <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-envelope fa-fw"></i>
+                                <!-- Counter - Messages -->
+                                <span class="badge badge-danger badge-counter">7</span>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="messagesDropdown">
+                                <h6 class="dropdown-header">
+                                    Message Center
+                                </h6>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_1.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div class="font-weight-bold">
+                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                            problem I've been having.</div>
+                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_2.svg"
+                                            alt="...">
+                                        <div class="status-indicator"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">I have the photos that you ordered last month, how
+                                            would you like them sent to you?</div>
+                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="img/undraw_profile_3.svg"
+                                            alt="...">
+                                        <div class="status-indicator bg-warning"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Last month's report looks great, I am very happy with
+                                            the progress so far, keep up the good work!</div>
+                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item d-flex align-items-center" href="#">
+                                    <div class="dropdown-list-image mr-3">
+                                        <img class="rounded-circle" src="https://source.unsplash.com/Mv9hjnEUHR4/60x60"
+                                            alt="...">
+                                        <div class="status-indicator bg-success"></div>
+                                    </div>
+                                    <div>
+                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
+                                            told me that people say this to all dogs, even if they aren't good...</div>
+                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                    </div>
+                                </a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle"
+                                    src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Activity Log
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
                     </ul>
-                  </div>
-                </div>
-                <div class="card-body" id="top-5-scroll">
-                  <ul class="list-unstyled list-unstyled-border text-right p-0">
-                    <li class="media">
-                      <img class="ml-3 rounded" width="55" src="../assets/img/products/product-3-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-left"><div class="font-weight-600 text-muted text-small">۸۶ فروش</div></div>
-                        <div class="media-title">آیفون S9 پلاس</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="64%"></div>
-                            <div class="budget-price-label">$۶۸,۷۱۴</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="43%"></div>
-                            <div class="budget-price-label">$۳۸,۷۰۰</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="ml-3 rounded" width="55" src="../assets/img/products/product-4-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-left"><div class="font-weight-600 text-muted text-small">۶۷ فروش</div></div>
-                        <div class="media-title">iBook Pro 2019</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="84%"></div>
-                            <div class="budget-price-label">$۱۰۷,۱۳۵</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="60%"></div>
-                            <div class="budget-price-label">$۹۱,۴۵۵</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="ml-3 rounded" width="55" src="../assets/img/products/product-1-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-left"><div class="font-weight-600 text-muted text-small">۶۳ فروش</div></div>
-                        <div class="media-title">هدفون Beats</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="34%"></div>
-                            <div class="budget-price-label">$۳,۷۱۷</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="28%"></div>
-                            <div class="budget-price-label">$۲,۸۳۵</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="ml-3 rounded" width="55" src="../assets/img/products/product-3-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-left"><div class="font-weight-600 text-muted text-small">28 Sales</div></div>
-                        <div class="media-title">آیفون لایت</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="45%"></div>
-                            <div class="budget-price-label">$۱۳,۹۷۲</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="30%"></div>
-                            <div class="budget-price-label">$۹,۶۶۰</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="ml-3 rounded" width="55" src="../assets/img/products/product-5-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-left"><div class="font-weight-600 text-muted text-small">19 Sales</div></div>
-                        <div class="media-title">دوربین عکاسی</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="35%"></div>
-                            <div class="budget-price-label">$۷,۳۹۱</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="28%"></div>
-                            <div class="budget-price-label">$۵,۴۷۲</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-footer pt-3 d-flex justify-content-center">
-                  <div class="budget-price justify-content-center">
-                    <div class="budget-price-square bg-primary" data-width="20"></div>
-                    <div class="budget-price-label">مبلغ فروش</div>
-                  </div>
-                  <div class="budget-price justify-content-center">
-                    <div class="budget-price-square bg-danger" data-width="20"></div>
-                    <div class="budget-price-label">ضرر برگشت کالا</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4>بهترین محصولات</h4>
-                </div>
-                <div class="card-body">
-                  <div class="owl-carousel owl-theme" id="products-carousel">
-                    <div>
-                      <div class="product-item pb-3">
-                        <div class="product-image">
-                          <img alt="image" src="../assets/img/products/product-4-50.png" class="img-fluid">
-                        </div>
-                        <div class="product-details">
-                          <div class="product-name">مک بوک ۲۰۱۹</div>
-                          <div class="product-review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-                          <div class="text-muted text-small">۶۷ فروش</div>
-                          <div class="product-cta">
-                            <a href="#" class="btn btn-primary">جزئیات</a>
-                          </div>
-                        </div>  
-                      </div>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                     </div>
-                    <div>
-                      <div class="product-item">
-                        <div class="product-image">
-                          <img alt="image" src="../assets/img/products/product-3-50.png" class="img-fluid">
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                                Earnings (Monthly)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="product-details">
-                          <div class="product-name">آیفون 5S</div>
-                          <div class="product-review">
-                            <i class="fas fa-star-half"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-                          <div class="text-muted text-small">۸۶ فروش</div>
-                          <div class="product-cta">
-                            <a href="#" class="btn btn-primary">توضیحات</a>
-                          </div>
-                        </div>  
-                      </div>
-                    </div>
-                    <div>
-                      <div class="product-item">
-                        <div class="product-image">
-                          <img alt="image" src="../assets/img/products/product-1-50.png" class="img-fluid">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-success shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                                Earnings (Annual)</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="product-details">
-                          <div class="product-name">هدفون Beats</div>
-                          <div class="product-review">
-                            <i class="far fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-                          <div class="text-muted text-small">۶۳ فروش</div>
-                          <div class="product-cta">
-                            <a href="#" class="btn btn-primary">توضیحات</a>
-                          </div>
-                        </div>  
-                      </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-info shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks
+                                            </div>
+                                            <div class="row no-gutters align-items-center">
+                                                <div class="col-auto">
+                                                    <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="progress progress-sm mr-2">
+                                                        <div class="progress-bar bg-info" role="progressbar"
+                                                            style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card border-left-warning shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                                Pending Requests</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-comments fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4>کشورهای برتر</h4>
-                </div>
-                <div class="card-body text-right">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="text-title mb-2">مرداد</div>
-                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0 p-0">
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../assets/modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
-                          <div class="media-body mr-3">
-                            <div class="media-title">اندونزی</div>
-                            <div class="text-small text-muted">۳,۲۸۶ <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../assets/modules/flag-icon-css/flags/4x3/my.svg" alt="image" width="40">
-                          <div class="media-body mr-3">
-                            <div class="media-title">مالزی</div>
-                            <div class="text-small text-muted">۵,۶۴۸ <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../assets/modules/flag-icon-css/flags/4x3/us.svg" alt="image" width="40">
-                          <div class="media-body mr-3">
-                            <div class="media-title">ایالات متحده</div>
-                            <div class="text-small text-muted">۱,۵۷۶ <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                      </ul>
+
+                    <!-- Content Row -->
+
+                    <div class="row">
+
+                        <!-- Area Chart -->
+                        <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-area">
+                                        <canvas id="myAreaChart"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Pie Chart -->
+                        <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4">
+                                <!-- Card Header - Dropdown -->
+                                <div
+                                    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                                    <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
+                                    <div class="dropdown no-arrow">
+                                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
+                                        </a>
+                                        <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
+                                            aria-labelledby="dropdownMenuLink">
+                                            <div class="dropdown-header">Dropdown Header:</div>
+                                            <a class="dropdown-item" href="#">Action</a>
+                                            <a class="dropdown-item" href="#">Another action</a>
+                                            <div class="dropdown-divider"></div>
+                                            <a class="dropdown-item" href="#">Something else here</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Card Body -->
+                                <div class="card-body">
+                                    <div class="chart-pie pt-4 pb-2">
+                                        <canvas id="myPieChart"></canvas>
+                                    </div>
+                                    <div class="mt-4 text-center small">
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-primary"></i> Direct
+                                        </span>
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-success"></i> Social
+                                        </span>
+                                        <span class="mr-2">
+                                            <i class="fas fa-circle text-info"></i> Referral
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-sm-6 mt-sm-0 mt-4">
-                      <div class="text-title mb-2">شهریور</div>
-                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0 p-0">
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../assets/modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
-                          <div class="media-body mr-3">
-                            <div class="media-title">اندونزی</div>
-                            <div class="text-small text-muted">۱,۴۸۶ <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../assets/modules/flag-icon-css/flags/4x3/ps.svg" alt="image" width="40">
-                          <div class="media-body mr-3">
-                            <div class="media-title">ایران</div>
-                            <div class="text-small text-muted">۳,۱۸۲ <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../assets/modules/flag-icon-css/flags/4x3/de.svg" alt="image" width="40">
-                          <div class="media-body mr-3">
-                            <div class="media-title">آلمان</div>
-                            <div class="text-small text-muted">۵,۶۵۴ <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                      </ul>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Content Column -->
+                        <div class="col-lg-6 mb-4">
+
+                            <!-- Project Card Example -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                                </div>
+                                <div class="card-body">
+                                    <h4 class="small font-weight-bold">Server Migration <span
+                                            class="float-right">20%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
+                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Sales Tracking <span
+                                            class="float-right">40%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 40%"
+                                            aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Customer Database <span
+                                            class="float-right">60%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar" role="progressbar" style="width: 60%"
+                                            aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Payout Details <span
+                                            class="float-right">80%</span></h4>
+                                    <div class="progress mb-4">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 80%"
+                                            aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <h4 class="small font-weight-bold">Account Setup <span
+                                            class="float-right">Complete!</span></h4>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%"
+                                            aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Color System -->
+                            <div class="row">
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-primary text-white shadow">
+                                        <div class="card-body">
+                                            Primary
+                                            <div class="text-white-50 small">#4e73df</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-success text-white shadow">
+                                        <div class="card-body">
+                                            Success
+                                            <div class="text-white-50 small">#1cc88a</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-info text-white shadow">
+                                        <div class="card-body">
+                                            Info
+                                            <div class="text-white-50 small">#36b9cc</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-warning text-white shadow">
+                                        <div class="card-body">
+                                            Warning
+                                            <div class="text-white-50 small">#f6c23e</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-danger text-white shadow">
+                                        <div class="card-body">
+                                            Danger
+                                            <div class="text-white-50 small">#e74a3b</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-secondary text-white shadow">
+                                        <div class="card-body">
+                                            Secondary
+                                            <div class="text-white-50 small">#858796</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-light text-black shadow">
+                                        <div class="card-body">
+                                            Light
+                                            <div class="text-black-50 small">#f8f9fc</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 mb-4">
+                                    <div class="card bg-dark text-white shadow">
+                                        <div class="card-body">
+                                            Dark
+                                            <div class="text-white-50 small">#5a5c69</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-6 mb-4">
+
+                            <!-- Illustrations -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
+                                </div>
+                                <div class="card-body">
+                                    <div class="text-center">
+                                        <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
+                                            src="img/undraw_posting_photo.svg" alt="...">
+                                    </div>
+                                    <p>Add some quality, svg illustrations to your project courtesy of <a
+                                            target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a
+                                        constantly updated collection of beautiful svg images that you can use
+                                        completely free and without attribution!</p>
+                                    <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
+                                        unDraw &rarr;</a>
+                                </div>
+                            </div>
+
+                            <!-- Approach -->
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+                                </div>
+                                <div class="card-body">
+                                    <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce
+                                        CSS bloat and poor page performance. Custom CSS classes are used to create
+                                        custom components and custom utility classes.</p>
+                                    <p class="mb-0">Before working with this theme, you should become familiar with the
+                                        Bootstrap framework, especially the utility classes.</p>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
-                  </div>
+
                 </div>
-              </div>
+                <!-- /.container-fluid -->
+
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8">
-              <div class="card">
-                <div class="card-header">
-                  <h4>صورتحساب ها</h4>
-                  <div class="card-header-action">
-                    <a href="#" class="btn btn-danger"> مشاهده همه <i class="fas fa-chevron-left"></i></a>
-                  </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2021</span>
+                    </div>
                 </div>
-                <div class="card-body p-0">
-                  <div class="table-responsive table-invoice text-right">
-                    <table class="table table-striped">
-                      <tr>
-                        <th>شماره صورتحساب</th>
-                        <th>مشتری</th>
-                        <th>وضعیت</th>
-                        <th>تاریخ سررسید</th>
-                        <th>عملیات</th>
-                      </tr>
-                      <tr>
-                        <td><a href="#">BMI-87239</a></td>
-                        <td class="font-weight-600">مهدی خانزادی</td>
-                        <td><div class="badge badge-warning">پرداخت نشده</div></td>
-                        <td>۱۹ مرداد, ۱۳۹۸</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">مشاهده جزئیات</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">BMI-48574</a></td>
-                        <td class="font-weight-600">مهیار انصاری</td>
-                        <td><div class="badge badge-success">پرداخت شده</div></td>
-                        <td>۲۵ مرداد, ۱۳۹۸</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">مشاهده جزئیات</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">BMI-76824</a></td>
-                        <td class="font-weight-600">هاشم مقدری</td>
-                        <td><div class="badge badge-warning">پرداخت نشده</div></td>
-                        <td>۲۵ فروردین, ۱۳۹۸</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">مشاهده جزئیات</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">BMI-84990</a></td>
-                        <td class="font-weight-600">علی نظری</td>
-                        <td><div class="badge badge-warning">پرداخت شده</div></td>
-                        <td>۲۵ مرداد, ۱۳۹۸</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">مشاهده جزئیات</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">BMI-87320</a></td>
-                        <td class="font-weight-600">محمدرضا ملک</td>
-                        <td><div class="badge badge-success">پرداخت نشده</div></td>
-                        <td>۲۵ مرداد, ۱۳۹۸</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">مشاهده جزئیات</a>
-                        </td>
-                      </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card card-hero">
-                <div class="card-header text-right">
-                  <div class="card-icon">
-                    <i class="far fa-question-circle"></i>
-                  </div>
-                  <h4>۱۴</h4>
-                  <div class="card-description">تیکت های ارسال شده</div>
-                </div>
-                <div class="card-body p-0 text-right">
-                  <div class="tickets-list">
-                    <a href="#" class="ticket-item">
-                      <div class="ticket-title">
-                        <h4>سفارش من هنوز ارسال نشده؟</h4>
-                      </div>
-                      <div class="ticket-info">
-                        <div>علی عباسی</div>
-                        <div class="bullet"></div>
-                        <div class="text-primary">۱ دقیقه قبل</div>
-                      </div>
-                    </a>
-                    <a href="#" class="ticket-item">
-                      <div class="ticket-title">
-                        <h4>لطفا سفارش من رو لغو کنید</h4>
-                      </div>
-                      <div class="ticket-info">
-                        <div>عاطفه سویضی</div>
-                        <div class="bullet"></div>
-                        <div>دو ساعت پیش</div>
-                      </div>
-                    </a>
-                    <a href="#" class="ticket-item">
-                      <div class="ticket-title">
-                        <h4>فشارسنجی که فرستادید شکسته بود</h4>
-                      </div>
-                      <div class="ticket-info">
-                        <div>هاشم مقدری</div>
-                        <div class="bullet"></div>
-                        <div>۶ ساعت پیش</div>
-                      </div>
-                    </a>
-                    <a href="features-tickets.html" class="ticket-item ticket-more">
-                      نمایش همه <i class="fas fa-chevron-left"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <footer class="main-footer">
-        <div class="footer-left">
-          Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
-        </div>
-        <div class="footer-right">
+            </footer>
+            <!-- End of Footer -->
 
         </div>
-      </footer>
+        <!-- End of Content Wrapper -->
+
     </div>
-  </div>
+    <!-- End of Page Wrapper -->
 
-  <!-- General JS Scripts -->
-  <script src="../assets/modules/jquery.min.js"></script>
-  <script src="../assets/modules/popper.js"></script>
-  <script src="../assets/modules/tooltip.js"></script>
-  <script src="../assets/modules/bootstrap/js/bootstrap.min.js"></script>
-  <script src="../assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
-  <script src="../assets/modules/moment.min.js"></script>
-  <script src="../assets/js/stisla.js"></script>
-  
-  <!-- JS Libraies -->
-  <script src="../assets/modules/jquery.sparkline.min.js"></script>
-  <script src="../assets/modules/chart.min.js"></script>
-  <script src="../assets/modules/owlcarousel2/dist/owl.carousel.min.js"></script>
-  <script src="../assets/modules/summernote/summernote-bs4.js"></script>
-  <script src="../assets/modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
-  <!-- Page Specific JS File -->
-  <script src="../assets/js/page/index.js"></script>
-  
-  <!-- Template JS File -->
-  <script src="../assets/js/scripts.js"></script>
-  <script src="../assets/js/custom.js"></script>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script th:src="@{/bootstrap/vendor/jquery/jquery.min.js}"></script>
+    <script th:src="@{/bootstrap/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script th:src="@{/bootstrap/vendor/jquery-easing/jquery.easing.min.js}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script th:src="@{/bootstrap/js/sb-admin-2.min.js}"></script>
+
+    <!-- Page level plugins -->
+    <script th:src="@{/bootstrap/vendor/chart.js/Chart.min.js}"></script>
+
+    <!-- Page level custom scripts -->
+    <script th:src="@{/bootstrap/js/demo/chart-area-demo.js}"></script>
+    <script th:src="@{/bootstrap/js/demo/chart-pie-demo.js}"></script>
+
 </body>
+
 </html>
