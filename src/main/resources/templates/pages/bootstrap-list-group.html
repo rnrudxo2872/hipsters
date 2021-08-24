@@ -3,17 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Ecommerce Dashboard &mdash; Stisla</title>
+  <title>Bootstrap Components &rsaquo; List Group &mdash; Stisla</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <!-- CSS Libraries -->
-  <link rel="stylesheet" href="../node_modules/jqvmap/dist/jqvmap.min.css">
-  <link rel="stylesheet" href="../node_modules/summernote/dist/summernote-bs4.css">
-  <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -251,11 +247,11 @@
           </div>
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>
-              <li class="nav-item dropdown active">
+              <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                 <ul class="dropdown-menu">
                   <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-                  <li class="active"><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
+                  <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
                 </ul>
               </li>
               <li class="menu-header">Starter</li>
@@ -268,7 +264,7 @@
                 </ul>
               </li>
               <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown active">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
                 <ul class="dropdown-menu">
                   <li><a class="nav-link" href="bootstrap-alert.html">Alert</a></li>
@@ -280,7 +276,7 @@
                   <li><a class="nav-link" href="bootstrap-collapse.html">Collapse</a></li>
                   <li><a class="nav-link" href="bootstrap-dropdown.html">Dropdown</a></li>
                   <li><a class="nav-link" href="bootstrap-form.html">Form</a></li>
-                  <li><a class="nav-link" href="bootstrap-list-group.html">List Group</a></li>
+                  <li class="active"><a class="nav-link" href="bootstrap-list-group.html">List Group</a></li>
                   <li><a class="nav-link" href="bootstrap-media-object.html">Media Object</a></li>
                   <li><a class="nav-link" href="bootstrap-modal.html">Modal</a></li>
                   <li><a class="nav-link" href="bootstrap-nav.html">Nav</a></li>
@@ -404,290 +400,117 @@
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-stats">
-                  <div class="card-stats-title">Order Statistics -
-                    <div class="dropdown d-inline">
-                      <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">August</a>
-                      <ul class="dropdown-menu dropdown-menu-sm">
-                        <li class="dropdown-title">Select Month</li>
-                        <li><a href="#" class="dropdown-item">January</a></li>
-                        <li><a href="#" class="dropdown-item">February</a></li>
-                        <li><a href="#" class="dropdown-item">March</a></li>
-                        <li><a href="#" class="dropdown-item">April</a></li>
-                        <li><a href="#" class="dropdown-item">May</a></li>
-                        <li><a href="#" class="dropdown-item">June</a></li>
-                        <li><a href="#" class="dropdown-item">July</a></li>
-                        <li><a href="#" class="dropdown-item active">August</a></li>
-                        <li><a href="#" class="dropdown-item">September</a></li>
-                        <li><a href="#" class="dropdown-item">October</a></li>
-                        <li><a href="#" class="dropdown-item">November</a></li>
-                        <li><a href="#" class="dropdown-item">December</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="card-stats-items">
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">24</div>
-                      <div class="card-stats-item-label">Pending</div>
-                    </div>
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">12</div>
-                      <div class="card-stats-item-label">Shipping</div>
-                    </div>
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">23</div>
-                      <div class="card-stats-item-label">Completed</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-archive"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Total Orders</h4>
-                  </div>
-                  <div class="card-body">
-                    59
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-chart">
-                  <canvas id="balance-chart" height="80"></canvas>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-dollar-sign"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Balance</h4>
-                  </div>
-                  <div class="card-body">
-                    $187,13
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-chart">
-                  <canvas id="sales-chart" height="80"></canvas>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-shopping-bag"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Sales</h4>
-                  </div>
-                  <div class="card-body">
-                    4,732
-                  </div>
-                </div>
-              </div>
+          <div class="section-header">
+            <h1>List Group</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+              <div class="breadcrumb-item"><a href="#">Bootstrap Components</a></div>
+              <div class="breadcrumb-item">List Group</div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Budget vs Sales</h4>
-                </div>
-                <div class="card-body">
-                  <canvas id="myChart" height="158"></canvas>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card gradient-bottom">
-                <div class="card-header">
-                  <h4>Top 5 Products</h4>
-                  <div class="card-header-action dropdown">
-                    <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">Month</a>
-                    <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                      <li class="dropdown-title">Select Period</li>
-                      <li><a href="#" class="dropdown-item">Today</a></li>
-                      <li><a href="#" class="dropdown-item">Week</a></li>
-                      <li><a href="#" class="dropdown-item active">Month</a></li>
-                      <li><a href="#" class="dropdown-item">This Year</a></li>
+
+          <div class="section-body">
+            <h2 class="section-title">List Group</h2>
+            <p class="section-lead">
+              List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within.
+            </p>
+
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Basic</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Morbi leo risus</li>
+                      <li class="list-group-item">Porta ac consectetur ac</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
                     </ul>
                   </div>
                 </div>
-                <div class="card-body" id="top-5-scroll">
-                  <ul class="list-unstyled list-unstyled-border">
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-3-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">86 Sales</div></div>
-                        <div class="media-title">oPhone S9 Limited</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="64%"></div>
-                            <div class="budget-price-label">$68,714</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="43%"></div>
-                            <div class="budget-price-label">$38,700</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-4-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">67 Sales</div></div>
-                        <div class="media-title">iBook Pro 2018</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="84%"></div>
-                            <div class="budget-price-label">$107,133</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="60%"></div>
-                            <div class="budget-price-label">$91,455</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-1-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">63 Sales</div></div>
-                        <div class="media-title">Headphone Blitz</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="34%"></div>
-                            <div class="budget-price-label">$3,717</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="28%"></div>
-                            <div class="budget-price-label">$2,835</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-3-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">28 Sales</div></div>
-                        <div class="media-title">oPhone X Lite</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="45%"></div>
-                            <div class="budget-price-label">$13,972</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="30%"></div>
-                            <div class="budget-price-label">$9,660</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-5-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">19 Sales</div></div>
-                        <div class="media-title">Old Camera</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="35%"></div>
-                            <div class="budget-price-label">$7,391</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="28%"></div>
-                            <div class="budget-price-label">$5,472</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-footer pt-3 d-flex justify-content-center">
-                  <div class="budget-price justify-content-center">
-                    <div class="budget-price-square bg-primary" data-width="20"></div>
-                    <div class="budget-price-label">Selling Price</div>
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Disabled</h4>
                   </div>
-                  <div class="budget-price justify-content-center">
-                    <div class="budget-price-square bg-danger" data-width="20"></div>
-                    <div class="budget-price-label">Budget Price</div>
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item disabled">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Morbi leo risus</li>
+                      <li class="list-group-item">Porta ac consectetur ac</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Best Products</h4>
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Flush</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Morbi leo risus</li>
+                      <li class="list-group-item">Porta ac consectetur ac</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="card-body">
-                  <div class="owl-carousel owl-theme" id="products-carousel">
-                    <div>
-                      <div class="product-item pb-3">
-                        <div class="product-image">
-                          <img alt="image" src="../assets/img/products/product-4-50.png" class="img-fluid">
-                        </div>
-                        <div class="product-details">
-                          <div class="product-name">iBook Pro 2018</div>
-                          <div class="product-review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-                          <div class="text-muted text-small">67 Sales</div>
-                          <div class="product-cta">
-                            <a href="#" class="btn btn-primary">Detail</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="product-item">
-                        <div class="product-image">
-                          <img alt="image" src="../assets/img/products/product-3-50.png" class="img-fluid">
-                        </div>
-                        <div class="product-details">
-                          <div class="product-name">oPhone S9 Limited</div>
-                          <div class="product-review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half"></i>
-                          </div>
-                          <div class="text-muted text-small">86 Sales</div>
-                          <div class="product-cta">
-                            <a href="#" class="btn btn-primary">Detail</a>
-                          </div>
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Badges</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Cras justo odio
+                        <span class="badge badge-primary badge-pill">14</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Dapibus ac facilisis in
+                        <span class="badge badge-primary badge-pill">2</span>
+                      </li>
+                      <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Morbi leo risus
+                        <span class="badge badge-primary badge-pill">1</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-header">
+                    <h4>JavaScript Behavior</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-4">
+                        <div class="list-group" id="list-tab" role="tablist">
+                          <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list" href="#list-home" role="tab">Home</a>
+                          <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" href="#list-profile" role="tab">Profile</a>
+                          <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" href="#list-messages" role="tab">Messages</a>
+                          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" href="#list-settings" role="tab">Settings</a>
                         </div>
                       </div>
-                    </div>
-                    <div>
-                      <div class="product-item">
-                        <div class="product-image">
-                          <img alt="image" src="../assets/img/products/product-1-50.png" class="img-fluid">
-                        </div>
-                        <div class="product-details">
-                          <div class="product-name">Headphone Blitz</div>
-                          <div class="product-review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
+                      <div class="col-8">
+                        <div class="tab-content" id="nav-tabContent">
+                          <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non.
                           </div>
-                          <div class="text-muted text-small">63 Sales</div>
-                          <div class="product-cta">
-                            <a href="#" class="btn btn-primary">Detail</a>
+                          <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+                            Deserunt cupidatat anim ullamco ut dolor anim sint nulla amet incididunt tempor ad ut pariatur officia culpa laboris occaecat. Dolor in nisi aliquip in non magna amet nisi sed commodo proident anim deserunt nulla veniam occaecat reprehenderit esse ut eu culpa fugiat nostrud pariatur adipisicing incididunt consequat nisi non amet.
+                          </div>
+                          <div class="tab-pane fade" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+                            In quis non esse eiusmod sunt fugiat magna pariatur officia anim ex officia nostrud amet nisi pariatur eu est id ut exercitation ex ad reprehenderit dolore nostrud sit ut culpa consequat magna ad labore proident ad qui et tempor exercitation in aute veniam et velit dolore irure qui ex magna ex culpa enim anim ea mollit consequat ullamco exercitation in.
+                          </div>
+                          <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                            Lorem ipsum culpa in ad velit dolore anim labore incididunt do aliqua sit veniam commodo elit dolore do labore occaecat laborum sed quis proident fugiat sunt pariatur. Cupidatat ut fugiat anim ut dolore excepteur ut voluptate dolore excepteur mollit commodo.
                           </div>
                         </div>
                       </div>
@@ -695,184 +518,86 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Top Countries</h4>
+              <div class="col-12 col-md-6 col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Active</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">Cras justo odio</li>
+                      <li class="list-group-item active">Dapibus ac facilisis in</li>
+                      <li class="list-group-item">Morbi leo risus</li>
+                      <li class="list-group-item">Porta ac consectetur ac</li>
+                      <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                  </div>
                 </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="text-title mb-2">July</div>
-                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0">
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Indonesia</div>
-                            <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/my.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Malaysia</div>
-                            <div class="text-small text-muted">2,976 <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/us.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">United States</div>
-                            <div class="text-small text-muted">1,576 <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col-sm-6 mt-sm-0 mt-4">
-                      <div class="text-title mb-2">August</div>
-                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0">
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Indonesia</div>
-                            <div class="text-small text-muted">3,486 <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/ps.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Palestine</div>
-                            <div class="text-small text-muted">3,182 <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/de.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Germany</div>
-                            <div class="text-small text-muted">2,317 <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                      </ul>
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Link</h4>
+                  </div>
+                  <div class="card-body">
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action active">
+                        Cras justo odio
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                      <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                      <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                      <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Invoices</h4>
-                  <div class="card-header-action">
-                    <a href="#" class="btn btn-danger">View More <i class="fas fa-chevron-right"></i></a>
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Contextual Classes</h4>
+                  </div>
+                  <div class="card-body">
+                    <ul class="list-group">
+                      <li class="list-group-item">Dapibus ac facilisis in</li>
+                      <li class="list-group-item list-group-item-primary">A simple primary list group item</li>
+                      <li class="list-group-item list-group-item-secondary">A simple secondary list group item</li>
+                      <li class="list-group-item list-group-item-success">A simple success list group item</li>
+                      <li class="list-group-item list-group-item-danger">A simple danger list group item</li>
+                      <li class="list-group-item list-group-item-warning">A simple warning list group item</li>
+                      <li class="list-group-item list-group-item-info">A simple info list group item</li>
+                      <li class="list-group-item list-group-item-light">A simple light list group item</li>
+                      <li class="list-group-item list-group-item-dark">A simple dark list group item</li>
+                    </ul>
                   </div>
                 </div>
-                <div class="card-body p-0">
-                  <div class="table-responsive table-invoice">
-                    <table class="table table-striped">
-                      <tr>
-                        <th>Invoice ID</th>
-                        <th>Customer</th>
-                        <th>Status</th>
-                        <th>Due Date</th>
-                        <th>Action</th>
-                      </tr>
-                      <tr>
-                        <td><a href="#">INV-87239</a></td>
-                        <td class="font-weight-600">Kusnadi</td>
-                        <td><div class="badge badge-warning">Unpaid</div></td>
-                        <td>July 19, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">INV-48574</a></td>
-                        <td class="font-weight-600">Hasan Basri</td>
-                        <td><div class="badge badge-success">Paid</div></td>
-                        <td>July 21, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">INV-76824</a></td>
-                        <td class="font-weight-600">Muhamad Nuruzzaki</td>
-                        <td><div class="badge badge-warning">Unpaid</div></td>
-                        <td>July 22, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">INV-84990</a></td>
-                        <td class="font-weight-600">Agung Ardiansyah</td>
-                        <td><div class="badge badge-warning">Unpaid</div></td>
-                        <td>July 22, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">INV-87320</a></td>
-                        <td class="font-weight-600">Ardian Rahardiansyah</td>
-                        <td><div class="badge badge-success">Paid</div></td>
-                        <td>July 28, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
-                      </tr>
-                    </table>
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Custom Content</h4>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card card-hero">
-                <div class="card-header">
-                  <div class="card-icon">
-                    <i class="far fa-question-circle"></i>
-                  </div>
-                  <h4>14</h4>
-                  <div class="card-description">Customers need help</div>
-                </div>
-                <div class="card-body p-0">
-                  <div class="tickets-list">
-                    <a href="#" class="ticket-item">
-                      <div class="ticket-title">
-                        <h4>My order hasn't arrived yet</h4>
-                      </div>
-                      <div class="ticket-info">
-                        <div>Laila Tazkiah</div>
-                        <div class="bullet"></div>
-                        <div class="text-primary">1 min ago</div>
-                      </div>
-                    </a>
-                    <a href="#" class="ticket-item">
-                      <div class="ticket-title">
-                        <h4>Please cancel my order</h4>
-                      </div>
-                      <div class="ticket-info">
-                        <div>Rizal Fakhri</div>
-                        <div class="bullet"></div>
-                        <div>2 hours ago</div>
-                      </div>
-                    </a>
-                    <a href="#" class="ticket-item">
-                      <div class="ticket-title">
-                        <h4>Do you see my mother?</h4>
-                      </div>
-                      <div class="ticket-info">
-                        <div>Syahdan Ubaidillah</div>
-                        <div class="bullet"></div>
-                        <div>6 hours ago</div>
-                      </div>
-                    </a>
-                    <a href="features-tickets.html" class="ticket-item ticket-more">
-                      View All <i class="fas fa-chevron-right"></i>
-                    </a>
+                  <div class="card-body">
+                    <div class="list-group">
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">List group item heading</h5>
+                          <small>3 days ago</small>
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small>Donec id elit non mi porta.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">List group item heading</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small class="text-muted">Donec id elit non mi porta.</small>
+                      </a>
+                      <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+                        <div class="d-flex w-100 justify-content-between">
+                          <h5 class="mb-1">List group item heading</h5>
+                          <small class="text-muted">3 days ago</small>
+                        </div>
+                        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                        <small class="text-muted">Donec id elit non mi porta.</small>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -881,15 +606,11 @@
         </section>
       </div>
       <footer class="main-footer">
-        <div class="footer-left col-md-6">
+        <div class="footer-left">
           Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
         </div>
-        <div class="footer-right col-md-3">
+        <div class="footer-right">
           2.3.0
-        </div>
-
-        <div class="col-md-12">
-          Distributed by <a href="https://themewagon.com/">Themewagon</a>
         </div>
       </footer>
     </div>
@@ -904,17 +625,11 @@
   <script src="../assets/js/stisla.js"></script>
 
   <!-- JS Libraies -->
-  <script src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
-  <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
-  <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-  <script src="../node_modules/summernote/dist/summernote-bs4.js"></script>
-  <script src="../node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
 
   <!-- Template JS File -->
   <script src="../assets/js/scripts.js"></script>
   <script src="../assets/js/custom.js"></script>
 
   <!-- Page Specific JS File -->
-  <script src="../assets/js/page/index.js"></script>
 </body>
 </html>
