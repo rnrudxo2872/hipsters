@@ -1,9 +1,7 @@
-<html lagn="ko" 
-      xmlns:th="http://www.thymeleaf.org">
-       
-    <!--headerFragment 선언-->
+<html lagn="ko" xmlns:th="http://www.thymeleaf.org">
     <div th:fragment="headerPart">
-        <h1>HEADER</h1>
+        <div class="navbar-bg"></div>
+        <nav th:replace="/partials/nav :: navPart"></nav>
+        <div th:replace="/partials/sidebar :: sidebarPart"></div>
     </div>
-    
 </html>

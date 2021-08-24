@@ -7,9 +7,14 @@
 
 <th:block th:replace="/partials/head"></th:block>
 <body>
-    <th:block th:replace="/partials/header :: headerPart"></th:block>
-    <th:block layout:fragment="content"></th:block>
-    <th:block th:replace="/partials/footer :: footerPart"></th:block>
+    <div id="app">
+        <div class="main-wrapper">
+            <th:block th:replace="/partials/header :: headerPart"></th:block>
+            <th:block layout:fragment="content"></th:block>
+            <th:block th:replace="/partials/footer :: footerPart"></th:block>
+        </div>
+        <th:block th:replace="/partials/config :: jsPart"></th:block>
+    </div>
 </body>
 
 </html>
