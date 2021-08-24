@@ -3,17 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>Ecommerce Dashboard &mdash; Stisla</title>
+  <title>Bootstrap Components &rsaquo; Card &mdash; Stisla</title>
 
   <!-- General CSS Files -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
   <!-- CSS Libraries -->
-  <link rel="stylesheet" href="../node_modules/jqvmap/dist/jqvmap.min.css">
-  <link rel="stylesheet" href="../node_modules/summernote/dist/summernote-bs4.css">
-  <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../node_modules/chocolat/dist/css/chocolat.css">
 
   <!-- Template CSS -->
   <link rel="stylesheet" href="../assets/css/style.css">
@@ -251,11 +248,11 @@
           </div>
           <ul class="sidebar-menu">
               <li class="menu-header">Dashboard</li>
-              <li class="nav-item dropdown active">
+              <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                 <ul class="dropdown-menu">
                   <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-                  <li class="active"><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
+                  <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
                 </ul>
               </li>
               <li class="menu-header">Starter</li>
@@ -268,14 +265,14 @@
                 </ul>
               </li>
               <li><a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank Page</span></a></li>
-              <li class="nav-item dropdown">
+              <li class="nav-item dropdown active">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
                 <ul class="dropdown-menu">
                   <li><a class="nav-link" href="bootstrap-alert.html">Alert</a></li>
                   <li><a class="nav-link" href="bootstrap-badge.html">Badge</a></li>
                   <li><a class="nav-link" href="bootstrap-breadcrumb.html">Breadcrumb</a></li>
                   <li><a class="nav-link" href="bootstrap-buttons.html">Buttons</a></li>
-                  <li><a class="nav-link" href="bootstrap-card.html">Card</a></li>
+                  <li class="active"><a class="nav-link" href="bootstrap-card.html">Card</a></li>
                   <li><a class="nav-link" href="bootstrap-carousel.html">Carousel</a></li>
                   <li><a class="nav-link" href="bootstrap-collapse.html">Collapse</a></li>
                   <li><a class="nav-link" href="bootstrap-dropdown.html">Dropdown</a></li>
@@ -404,475 +401,403 @@
       <!-- Main Content -->
       <div class="main-content">
         <section class="section">
-          <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-stats">
-                  <div class="card-stats-title">Order Statistics -
-                    <div class="dropdown d-inline">
-                      <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">August</a>
-                      <ul class="dropdown-menu dropdown-menu-sm">
-                        <li class="dropdown-title">Select Month</li>
-                        <li><a href="#" class="dropdown-item">January</a></li>
-                        <li><a href="#" class="dropdown-item">February</a></li>
-                        <li><a href="#" class="dropdown-item">March</a></li>
-                        <li><a href="#" class="dropdown-item">April</a></li>
-                        <li><a href="#" class="dropdown-item">May</a></li>
-                        <li><a href="#" class="dropdown-item">June</a></li>
-                        <li><a href="#" class="dropdown-item">July</a></li>
-                        <li><a href="#" class="dropdown-item active">August</a></li>
-                        <li><a href="#" class="dropdown-item">September</a></li>
-                        <li><a href="#" class="dropdown-item">October</a></li>
-                        <li><a href="#" class="dropdown-item">November</a></li>
-                        <li><a href="#" class="dropdown-item">December</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="card-stats-items">
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">24</div>
-                      <div class="card-stats-item-label">Pending</div>
-                    </div>
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">12</div>
-                      <div class="card-stats-item-label">Shipping</div>
-                    </div>
-                    <div class="card-stats-item">
-                      <div class="card-stats-item-count">23</div>
-                      <div class="card-stats-item-label">Completed</div>
-                    </div>
-                  </div>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-archive"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Total Orders</h4>
-                  </div>
-                  <div class="card-body">
-                    59
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-chart">
-                  <canvas id="balance-chart" height="80"></canvas>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-dollar-sign"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Balance</h4>
-                  </div>
-                  <div class="card-body">
-                    $187,13
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-              <div class="card card-statistic-2">
-                <div class="card-chart">
-                  <canvas id="sales-chart" height="80"></canvas>
-                </div>
-                <div class="card-icon shadow-primary bg-primary">
-                  <i class="fas fa-shopping-bag"></i>
-                </div>
-                <div class="card-wrap">
-                  <div class="card-header">
-                    <h4>Sales</h4>
-                  </div>
-                  <div class="card-body">
-                    4,732
-                  </div>
-                </div>
-              </div>
+          <div class="section-header">
+            <h1>Card</h1>
+            <div class="section-header-breadcrumb">
+              <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+              <div class="breadcrumb-item"><a href="#">Bootstrap Components</a></div>
+              <div class="breadcrumb-item">Card</div>
             </div>
           </div>
-          <div class="row">
-            <div class="col-lg-8">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Budget vs Sales</h4>
+
+          <div class="section-body">
+            <h2 class="section-title">Cards</h2>
+            <p class="section-lead">
+              Bootstrap’s cards provide a flexible and extensible content container with multiple variants and options.
+            </p>
+
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Card Title</h4>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body.
+                  </div>
+                  <div class="card-footer">
+                    Footer Card
+                  </div>
                 </div>
-                <div class="card-body">
-                  <canvas id="myChart" height="158"></canvas>
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Card Action Button</h4>
+                  </div>
+                  <div class="card-body">
+                    This is some text within a card body.
+                  </div>
+                  <div class="card-footer text-right">
+                    <button class="btn btn-primary">Submit</button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-lg-4">
-              <div class="card gradient-bottom">
-                <div class="card-header">
-                  <h4>Top 5 Products</h4>
-                  <div class="card-header-action dropdown">
-                    <a href="#" data-toggle="dropdown" class="btn btn-danger dropdown-toggle">Month</a>
-                    <ul class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-                      <li class="dropdown-title">Select Period</li>
-                      <li><a href="#" class="dropdown-item">Today</a></li>
-                      <li><a href="#" class="dropdown-item">Week</a></li>
-                      <li><a href="#" class="dropdown-item active">Month</a></li>
-                      <li><a href="#" class="dropdown-item">This Year</a></li>
-                    </ul>
+              <div class="col-12 col-md-6 col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h4 class="card-title">Card Title</h4>
+                  </div>
+                  <div class="card-body">
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
                   </div>
                 </div>
-                <div class="card-body" id="top-5-scroll">
-                  <ul class="list-unstyled list-unstyled-border">
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-3-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">86 Sales</div></div>
-                        <div class="media-title">oPhone S9 Limited</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="64%"></div>
-                            <div class="budget-price-label">$68,714</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="43%"></div>
-                            <div class="budget-price-label">$38,700</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-4-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">67 Sales</div></div>
-                        <div class="media-title">iBook Pro 2018</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="84%"></div>
-                            <div class="budget-price-label">$107,133</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="60%"></div>
-                            <div class="budget-price-label">$91,455</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-1-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">63 Sales</div></div>
-                        <div class="media-title">Headphone Blitz</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="34%"></div>
-                            <div class="budget-price-label">$3,717</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="28%"></div>
-                            <div class="budget-price-label">$2,835</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-3-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">28 Sales</div></div>
-                        <div class="media-title">oPhone X Lite</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="45%"></div>
-                            <div class="budget-price-label">$13,972</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="30%"></div>
-                            <div class="budget-price-label">$9,660</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                    <li class="media">
-                      <img class="mr-3 rounded" width="55" src="../assets/img/products/product-5-50.png" alt="product">
-                      <div class="media-body">
-                        <div class="float-right"><div class="font-weight-600 text-muted text-small">19 Sales</div></div>
-                        <div class="media-title">Old Camera</div>
-                        <div class="mt-1">
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-primary" data-width="35%"></div>
-                            <div class="budget-price-label">$7,391</div>
-                          </div>
-                          <div class="budget-price">
-                            <div class="budget-price-square bg-danger" data-width="28%"></div>
-                            <div class="budget-price-label">$5,472</div>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="card-footer pt-3 d-flex justify-content-center">
-                  <div class="budget-price justify-content-center">
-                    <div class="budget-price-square bg-primary" data-width="20"></div>
-                    <div class="budget-price-label">Selling Price</div>
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Footer <code>bg-whitesmoke</code></h4>
                   </div>
-                  <div class="budget-price justify-content-center">
-                    <div class="budget-price-square bg-danger" data-width="20"></div>
-                    <div class="budget-price-label">Budget Price</div>
+                  <div class="card-body">
+                    This is some text within a card body.
+                  </div>
+                  <div class="card-footer bg-whitesmoke">
+                    Footer Card
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Best Products</h4>
+
+            <h2 class="section-title">Card Variants</h2>
+            <p class="section-lead">
+              Basically, the Bootstrap card can be given a color variant.
+            </p>
+
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Card <code>.card-primary</code></p>
+                  </div>
                 </div>
-                <div class="card-body">
-                  <div class="owl-carousel owl-theme" id="products-carousel">
-                    <div>
-                      <div class="product-item pb-3">
-                        <div class="product-image">
-                          <img alt="image" src="../assets/img/products/product-4-50.png" class="img-fluid">
-                        </div>
-                        <div class="product-details">
-                          <div class="product-name">iBook Pro 2018</div>
-                          <div class="product-review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                          </div>
-                          <div class="text-muted text-small">67 Sales</div>
-                          <div class="product-cta">
-                            <a href="#" class="btn btn-primary">Detail</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="product-item">
-                        <div class="product-image">
-                          <img alt="image" src="../assets/img/products/product-3-50.png" class="img-fluid">
-                        </div>
-                        <div class="product-details">
-                          <div class="product-name">oPhone S9 Limited</div>
-                          <div class="product-review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half"></i>
-                          </div>
-                          <div class="text-muted text-small">86 Sales</div>
-                          <div class="product-cta">
-                            <a href="#" class="btn btn-primary">Detail</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div>
-                      <div class="product-item">
-                        <div class="product-image">
-                          <img alt="image" src="../assets/img/products/product-1-50.png" class="img-fluid">
-                        </div>
-                        <div class="product-details">
-                          <div class="product-name">Headphone Blitz</div>
-                          <div class="product-review">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                          </div>
-                          <div class="text-muted text-small">63 Sales</div>
-                          <div class="product-cta">
-                            <a href="#" class="btn btn-primary">Detail</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-secondary">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Card <code>.card-secondary</code></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-danger">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Card <code>.card-danger</code></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-warning">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Card <code>.card-warning</code></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-info">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Card <code>.card-info</code></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-success">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Card <code>.card-success</code></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-light">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Card <code>.card-light</code></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-dark">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Card <code>.card-dark</code></p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-md-6">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Top Countries</h4>
+
+            <h2 class="section-title">Card Button &amp; Input</h2>
+            <p class="section-lead">
+              Also, you can give a button or input on the card header.
+            </p>
+
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-6">
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                    <div class="card-header-action">
+                      <a href="#" class="btn btn-primary">
+                        View All
+                      </a>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p>Write something here</p>
+                  </div>
                 </div>
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-6">
-                      <div class="text-title mb-2">July</div>
-                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0">
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Indonesia</div>
-                            <div class="text-small text-muted">3,282 <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/my.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Malaysia</div>
-                            <div class="text-small text-muted">2,976 <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/us.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">United States</div>
-                            <div class="text-small text-muted">1,576 <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                      </ul>
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <h4>Button Group</h4>
+                    <div class="card-header-action">
+                      <div class="btn-group">
+                        <a href="#" class="btn btn-primary">Home</a>
+                        <a href="#" class="btn btn-primary">Profile</a>
+                        <a href="#" class="btn btn-primary">Setting</a>
+                      </div>
                     </div>
-                    <div class="col-sm-6 mt-sm-0 mt-4">
-                      <div class="text-title mb-2">August</div>
-                      <ul class="list-unstyled list-unstyled-border list-unstyled-noborder mb-0">
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/id.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Indonesia</div>
-                            <div class="text-small text-muted">3,486 <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/ps.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Palestine</div>
-                            <div class="text-small text-muted">3,182 <i class="fas fa-caret-up text-success"></i></div>
-                          </div>
-                        </li>
-                        <li class="media">
-                          <img class="img-fluid mt-1 img-shadow" src="../node_modules/flag-icon-css/flags/4x3/de.svg" alt="image" width="40">
-                          <div class="media-body ml-3">
-                            <div class="media-title">Germany</div>
-                            <div class="text-small text-muted">2,317 <i class="fas fa-caret-down text-danger"></i></div>
-                          </div>
-                        </li>
-                      </ul>
+                  </div>
+                  <div class="card-body">
+                    <p>Write something here</p>
+                  </div>
+                </div>
+                <div class="card card-success">
+                  <div class="card-header">
+                    <h4>Input Text</h4>
+                    <form class="card-header-form">
+                      <input type="text" name="search" class="form-control" placeholder="Search">
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <p>Write something here</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-6">
+                <div class="card card-secondary">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                    <div class="card-header-action">
+                      <a href="#" class="btn btn-primary">View All</a>
+                      <a href="#" class="btn btn-danger">Delete All</a>
                     </div>
+                  </div>
+                  <div class="card-body">
+                    <p>Write something here</p>
+                  </div>
+                </div>
+                <div class="card card-danger">
+                  <div class="card-header">
+                    <h4>Dropdown Button</h4>
+                    <div class="card-header-action">
+                      <a href="#" class="btn btn-primary">View All</a>
+                      <div class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="btn btn-warning dropdown-toggle">Options</a>
+                        <div class="dropdown-menu">
+                          <a href="#" class="dropdown-item has-icon"><i class="fas fa-eye"></i> View</a>
+                          <a href="#" class="dropdown-item has-icon"><i class="far fa-edit"></i> Edit</a>
+                          <div class="dropdown-divider"></div>
+                          <a href="#" class="dropdown-item has-icon text-danger"><i class="far fa-trash-alt"></i> Delete</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <p>Write something here</p>
+                  </div>
+                </div>
+                <div class="card card-warning">
+                  <div class="card-header">
+                    <h4>Input Button</h4>
+                    <form class="card-header-form">
+                      <div class="input-group">
+                        <input type="text" name="search" class="form-control" placeholder="Search">
+                        <div class="input-group-btn">
+                          <button class="btn btn-primary btn-icon"><i class="fas fa-search"></i></button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="card-body">
+                    <p>Write something here</p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col-md-8">
-              <div class="card">
-                <div class="card-header">
-                  <h4>Invoices</h4>
-                  <div class="card-header-action">
-                    <a href="#" class="btn btn-danger">View More <i class="fas fa-chevron-right"></i></a>
+
+            <h2 class="section-title">Functionality Card</h2>
+            <p class="section-lead">
+              You can provide functionality on the card.
+            </p>
+
+            <div class="row">
+              <div class="col-12 col-sm-6 col-lg-6">
+                <div class="card">
+                  <div class="card-header">
+                    <h4>Show/Hide</h4>
+                    <div class="card-header-action">
+                      <a data-collapse="#mycard-collapse" class="btn btn-icon btn-info" href="#"><i class="fas fa-minus"></i></a>
+                    </div>
+                  </div>
+                  <div class="collapse show" id="mycard-collapse">
+                    <div class="card-body">
+                      You can show or hide this card.
+                    </div>
+                    <div class="card-footer">
+                      Card Footer
+                    </div>
                   </div>
                 </div>
-                <div class="card-body p-0">
-                  <div class="table-responsive table-invoice">
-                    <table class="table table-striped">
-                      <tr>
-                        <th>Invoice ID</th>
-                        <th>Customer</th>
-                        <th>Status</th>
-                        <th>Due Date</th>
-                        <th>Action</th>
-                      </tr>
-                      <tr>
-                        <td><a href="#">INV-87239</a></td>
-                        <td class="font-weight-600">Kusnadi</td>
-                        <td><div class="badge badge-warning">Unpaid</div></td>
-                        <td>July 19, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">INV-48574</a></td>
-                        <td class="font-weight-600">Hasan Basri</td>
-                        <td><div class="badge badge-success">Paid</div></td>
-                        <td>July 21, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">INV-76824</a></td>
-                        <td class="font-weight-600">Muhamad Nuruzzaki</td>
-                        <td><div class="badge badge-warning">Unpaid</div></td>
-                        <td>July 22, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">INV-84990</a></td>
-                        <td class="font-weight-600">Agung Ardiansyah</td>
-                        <td><div class="badge badge-warning">Unpaid</div></td>
-                        <td>July 22, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td><a href="#">INV-87320</a></td>
-                        <td class="font-weight-600">Ardian Rahardiansyah</td>
-                        <td><div class="badge badge-success">Paid</div></td>
-                        <td>July 28, 2018</td>
-                        <td>
-                          <a href="#" class="btn btn-primary">Detail</a>
-                        </td>
-                      </tr>
-                    </table>
+                <div class="card">
+                  <div class="card-header">
+                    <h4>My Picture</h4>
+                    <div class="card-header-action">
+                      <a href="#" class="btn btn-primary">View All</a>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="mb-2 text-muted">Click the picture below to see the magic!</div>
+                    <div class="chocolat-parent">
+                      <a href="../assets/img/example-image.jpg" class="chocolat-image" title="Just an example">
+                        <div data-crop-image="285">
+                          <img alt="image" src="../assets/img/example-image.jpg" class="img-fluid">
+                        </div>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card card-hero">
-                <div class="card-header">
-                  <div class="card-icon">
-                    <i class="far fa-question-circle"></i>
+              <div class="col-12 col-sm-6 col-lg-6">
+                <div class="card" id="mycard-dimiss">
+                  <div class="card-header">
+                    <h4>Dismiss</h4>
+                    <div class="card-header-action">
+                      <a data-dismiss="#mycard-dimiss" class="btn btn-icon btn-danger" href="#"><i class="fas fa-times"></i></a>
+                    </div>
                   </div>
-                  <h4>14</h4>
-                  <div class="card-description">Customers need help</div>
+                  <div class="card-body">
+                    You can dimiss this card.
+                  </div>
+                  <div class="card-footer">
+                    Card Footer
+                  </div>
                 </div>
-                <div class="card-body p-0">
-                  <div class="tickets-list">
-                    <a href="#" class="ticket-item">
-                      <div class="ticket-title">
-                        <h4>My order hasn't arrived yet</h4>
+                <div class="card" id="sample-login">
+                  <form>
+                    <div class="card-header">
+                      <h4>Login</h4>
+                    </div>
+                    <div class="card-body pb-0">
+                      <p class="text-muted">Click login to change the card to progress mode.</p>
+                      <div class="form-group">
+                        <label>Username</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <i class="fas fa-envelope"></i>
+                            </div>
+                          </div>
+                          <input type="text" class="form-control" placeholder="Email">
+                        </div>
                       </div>
-                      <div class="ticket-info">
-                        <div>Laila Tazkiah</div>
-                        <div class="bullet"></div>
-                        <div class="text-primary">1 min ago</div>
+                      <div class="form-group">
+                        <label>Password</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <div class="input-group-text">
+                              <i class="fas fa-lock"></i>
+                            </div>
+                          </div>
+                          <input type="password" class="form-control" placeholder="Password">
+                        </div>
                       </div>
-                    </a>
-                    <a href="#" class="ticket-item">
-                      <div class="ticket-title">
-                        <h4>Please cancel my order</h4>
+                      <div class="form-group mb-0">
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" name="remember" class="custom-control-input" id="remember-me">
+                          <label class="custom-control-label" for="remember-me">Remember Me</label>
+                        </div>
                       </div>
-                      <div class="ticket-info">
-                        <div>Rizal Fakhri</div>
-                        <div class="bullet"></div>
-                        <div>2 hours ago</div>
-                      </div>
-                    </a>
-                    <a href="#" class="ticket-item">
-                      <div class="ticket-title">
-                        <h4>Do you see my mother?</h4>
-                      </div>
-                      <div class="ticket-info">
-                        <div>Syahdan Ubaidillah</div>
-                        <div class="bullet"></div>
-                        <div>6 hours ago</div>
-                      </div>
-                    </a>
-                    <a href="features-tickets.html" class="ticket-item ticket-more">
-                      View All <i class="fas fa-chevron-right"></i>
-                    </a>
+                    </div>
+                    <div class="card-footer pt-">
+                      <button type="submit" onclick="$.cardProgress('#sample-login', {dismiss: true,onDismiss: function() {alert('Dismissed :)')}});return false;" class="btn btn-primary">Login</button>
+                      <a href="#" class="ml-2">Create new Account?</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+            <h2 class="section-title">Sortable Card</h2>
+            <p class="section-lead">
+              Other cool cards, this one can be sorted.
+            </p>
+
+            <div class="row sortable-card">
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-primary">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Card <code>.card-primary</code></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-secondary">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Card <code>.card-secondary</code></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-danger">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Card <code>.card-danger</code></p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-warning">
+                  <div class="card-header">
+                    <h4>Card Header</h4>
+                  </div>
+                  <div class="card-body">
+                    <p>Card <code>.card-warning</code></p>
                   </div>
                 </div>
               </div>
@@ -881,15 +806,11 @@
         </section>
       </div>
       <footer class="main-footer">
-        <div class="footer-left col-md-6">
+        <div class="footer-left">
           Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
         </div>
-        <div class="footer-right col-md-3">
+        <div class="footer-right">
           2.3.0
-        </div>
-
-        <div class="col-md-12">
-          Distributed by <a href="https://themewagon.com/">Themewagon</a>
         </div>
       </footer>
     </div>
@@ -904,17 +825,13 @@
   <script src="../assets/js/stisla.js"></script>
 
   <!-- JS Libraies -->
-  <script src="../node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
-  <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
-  <script src="../node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-  <script src="../node_modules/summernote/dist/summernote-bs4.js"></script>
   <script src="../node_modules/chocolat/dist/js/jquery.chocolat.min.js"></script>
+  <script src="../node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
 
   <!-- Template JS File -->
   <script src="../assets/js/scripts.js"></script>
   <script src="../assets/js/custom.js"></script>
 
   <!-- Page Specific JS File -->
-  <script src="../assets/js/page/index.js"></script>
 </body>
 </html>
