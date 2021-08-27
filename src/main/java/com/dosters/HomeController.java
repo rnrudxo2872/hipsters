@@ -22,7 +22,6 @@ public class HomeController {
         return "auth-login";
     }
 
-
     @GetMapping("/timeline")
     public String timeline() {
         return "timeline/timeline";

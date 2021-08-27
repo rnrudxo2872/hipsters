@@ -1,5 +1,6 @@
-package com.dosters.home.todo;
+package com.dosters.todo;
 
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -7,8 +8,7 @@ import java.util.List;
 
 import com.dosters.api.todo.ToDoRestController;
 import com.dosters.api.todo.service.DostersToDoService;
-import com.dosters.api.todo.service.ToDoService;
-import com.dosters.todo.domain.ToDoEntity;
+import com.dosters.api.todo.domain.ToDoEntity;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -45,5 +45,7 @@ public class ToDoRestControllerTests {
         when(todoService.getAll()).thenReturn(todo);
 
         mvc.perform(MockMvcRequestBuilders.get("/api/todo")).andExpect(MockMvcResultMatchers.status().isOk());
+        assertTrue(todoService.getAll() == todo);
+        System.out.println("됏나?");
     }
 }

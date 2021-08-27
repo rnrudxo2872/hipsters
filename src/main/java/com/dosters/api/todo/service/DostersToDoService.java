@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Optional;
 
 import com.dosters.dtos.CommonOutput;
-import com.dosters.todo.domain.ToDoEntity;
-import com.dosters.todo.repository.ToDoRepository;
+import com.dosters.api.todo.domain.ToDoEntity;
+import com.dosters.api.todo.repository.ToDoRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -23,13 +23,11 @@ public class DostersToDoService implements ToDoService {
 
     @Override
     public List<ToDoEntity> getAll() {
-        // TODO Auto-generated method stub
         return null;
     }
 
     @Override
     public ToDoEntity getOne() {
-        // TODO Auto-generated method stub
         Optional<ToDoEntity> test = todoRepository.findById(1L);
         if (test.isPresent()) {
             ToDoEntity testImpl = test.get();
@@ -41,7 +39,7 @@ public class DostersToDoService implements ToDoService {
     @Override
     public CommonOutput createOne(ToDoEntity todoEntity) {
         ToDoEntity todo = new ToDoEntity();
-        todo.setTitle("test");
+        todo.setContent("test");
         todoRepository.save(todo);
         logger.info("넣었다!");
         return null;

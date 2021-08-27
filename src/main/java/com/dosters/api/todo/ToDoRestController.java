@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.dosters.api.todo.service.DostersToDoService;
 import com.dosters.dtos.CommonOutput;
-import com.dosters.todo.domain.ToDoEntity;
+import com.dosters.api.todo.domain.ToDoEntity;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package com.dosters.todo.domain;
+package com.dosters.api.todo.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,5 +25,5 @@ public class ToDoEntity {
     private long id;
 
     @Column(nullable = false)
-    private String title;
+    private String content;
 }
