@@ -1,27 +1,35 @@
-package com.dosters.todo.service;
+package com.dosters.api.todo.service;
 
 import java.util.List;
 import java.util.Optional;
 
+import com.dosters.dtos.CommonOutput;
 import com.dosters.todo.domain.ToDoEntity;
 import com.dosters.todo.repository.ToDoRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ToDoService {
+public class DostersToDoService implements ToDoService {
 
-    private final Logger logger = LoggerFactory.getLogger(ToDoService.class);
+    private final Logger logger = LoggerFactory.getLogger(DostersToDoService.class);
     private final ToDoRepository todoRepository;
 
-    public ToDoService(ToDoRepository todoRepository) {
+    public DostersToDoService(ToDoRepository todoRepository) {
         this.todoRepository = todoRepository;
     }
 
-    public List getToDoList() throws Exception {
+    @Override
+    public List<ToDoEntity> getAll() {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    @Override
+    public ToDoEntity getOne() {
+        // TODO Auto-generated method stub
         Optional<ToDoEntity> test = todoRepository.findById(1L);
         if (test.isPresent()) {
             ToDoEntity testImpl = test.get();
@@ -30,10 +38,12 @@ public class ToDoService {
         return null;
     }
 
-    public void insertToDoList() throws Exception {
+    @Override
+    public CommonOutput createOne(ToDoEntity todoEntity) {
         ToDoEntity todo = new ToDoEntity();
         todo.setTitle("test");
         todoRepository.save(todo);
         logger.info("넣었다!");
+        return null;
     }
 }

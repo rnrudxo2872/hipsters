@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>ToDo</title>
-</head>
-<body>
-    <h1>To Do</h1>
-</body>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="/layout/default_layout">
+
+    <div layout:fragment="content" class="main-content">
+        <h2>Hi</h2>
+        <div>제대로 되고 있능가?</div>
+        <h2>왜 나는 이걸 하고잇지?</h2>
+    </div>
 </html>
