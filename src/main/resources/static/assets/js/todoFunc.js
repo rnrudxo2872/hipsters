@@ -1,7 +1,6 @@
 const nowList = document.getElementById('todo-nowList');
 
 const getUserToDoList = async () => {
-    nowList.innerHTML = "List1"
     const url = '/api/todo'
     let fetchResponse = await (await fetch(url).catch(fetchError));
     
@@ -11,12 +10,12 @@ const getUserToDoList = async () => {
     }
     const result = await fetchResponse.json();
     
-    if(!Array.isArray(result.data)) {
+    if(!Array.isArray(result)) {
         console.log("배열이 아님!");
         return ;
     }
 
-    nowList.innerHTML = result.data.map(element => 
+    nowList.innerHTML = result.map(element => 
         `<div class="nowList-one">
             <div class="nowList-one-id">
                 ${element.id}

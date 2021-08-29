@@ -4,13 +4,10 @@ import java.util.List;
 
 import com.dosters.api.todo.service.DostersToDoService;
 import com.dosters.dtos.CommonOutput;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonObject;
 import com.dosters.api.todo.domain.ToDoEntity;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,23 +24,11 @@ public class ToDoRestController {
     }
 
     @GetMapping("")
-    public String getToDoList(Model model) throws Exception {
+    public List<ToDoEntity> getToDoList() throws Exception {
         logger.info("get -> DoMain!");
 
         List<ToDoEntity> test = todoService.getAll();
-        JsonObject obj = new JsonObject();
-        JsonArray jsonArray = new JsonArray();
-
-        for (ToDoEntity item : test) {
-            JsonObject jsonObject = new JsonObject();
-            jsonObject.addProperty("id", item.getId());
-            jsonObject.addProperty("content", item.getContent());
-
-            jsonArray.add(jsonObject);
-        }
-
-        obj.add("data", jsonArray);
-        return obj.toString();
+        return test;
     }
 
     @PostMapping("")
