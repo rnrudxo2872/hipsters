@@ -4,6 +4,8 @@ import java.util.List;
 
 import com.dosters.api.todo.service.DostersToDoService;
 import com.dosters.dtos.CommonOutput;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 import com.dosters.api.todo.domain.ToDoEntity;
 
 import org.slf4j.Logger;
@@ -29,7 +31,19 @@ public class ToDoRestController {
         logger.info("get -> DoMain!");
 
         List<ToDoEntity> test = todoService.getAll();
-        return test.toString();
+        JsonObject obj = new JsonObject();
+        JsonArray jsonArray = new JsonArray();
+
+        for (ToDoEntity item : test) {
+            JsonObject jsonObject = new JsonObject();
+            jsonObject.addProperty("id", item.getId());
+            jsonObject.addProperty("content", item.getContent());
+
+            jsonArray.add(jsonObject);
+        }
+
+        obj.add("data", jsonArray);
+        return obj.toString();
     }
 
     @PostMapping("")

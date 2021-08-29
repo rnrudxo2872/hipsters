@@ -23,7 +23,8 @@ public class DostersToDoService implements ToDoService {
 
     @Override
     public List<ToDoEntity> getAll() {
-        return null;
+        List<ToDoEntity> retList = todoRepository.findAll();
+        return retList;
     }
 
     @Override
