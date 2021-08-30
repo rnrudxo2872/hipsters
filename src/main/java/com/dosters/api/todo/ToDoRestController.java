@@ -5,6 +5,7 @@ import java.util.List;
 import com.dosters.api.todo.service.DostersToDoService;
 import com.dosters.dtos.CommonOutput;
 import com.dosters.api.todo.domain.ToDoEntity;
+import com.dosters.api.todo.dtos.ToDoDto;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,18 +25,18 @@ public class ToDoRestController {
     }
 
     @GetMapping("")
-    public List<ToDoEntity> getToDoList() throws Exception {
+    public List<ToDoDto.Info> getToDoList() throws Exception {
         logger.info("get -> DoMain!");
 
-        List<ToDoEntity> test = todoService.getAll();
+        List<ToDoDto.Info> test = todoService.getAll();
         return test;
     }
 
     @PostMapping("")
-    public String createToDo(ToDoEntity todoEntity) throws Exception {
+    public String createToDo(ToDoDto.post todoDto) throws Exception {
         logger.info("post -> insert ToDo!");
 
-        CommonOutput result = todoService.createOne(todoEntity);
+        CommonOutput result = todoService.createOne(todoDto);
         return result.toString();
     }
 }

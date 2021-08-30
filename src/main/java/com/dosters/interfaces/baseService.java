@@ -2,10 +2,12 @@ package com.dosters.interfaces;
 
 import java.util.List;
 
-public interface baseService<Entity, Output> {
-    public List<Entity> getAll();
+import com.dosters.dtos.CommonInputDto;
 
-    public Entity getOne();
+public interface baseService<Dto, Output> {
+    public List<? extends Dto> getAll();
 
-    public Output createOne(Entity entity);
+    public Dto getOne();
+
+    public Output createOne(Dto entity);
 }

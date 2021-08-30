@@ -26,4 +26,7 @@ public class ToDoEntity {
 
     @Column(nullable = false)
     private String content;
+
+    @Column(nullable = false)
+    private long user_id;
 }
