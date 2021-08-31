@@ -7,7 +7,7 @@ import com.dosters.dtos.CommonInputDto;
 public interface baseService<Dto, Output> {
     public List<? extends Dto> getAll();
 
-    public Dto getOne();
+    public Output getOne();
 
     public Output createOne(Dto entity);
 }
