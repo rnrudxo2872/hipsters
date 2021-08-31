@@ -23,9 +23,11 @@ public class HomeController {
     }
 
 
+
     @GetMapping("/timeline")
     public String timeline() {
         return "timeline/timeline";
     }
 
 }
+
