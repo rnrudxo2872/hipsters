@@ -34,3 +34,8 @@ build/
 
 ### properties
 src/main/resources/db.properties
+src/main/resources/email.properties
+
+###
+**/.DS_Store
+**/._.DS_Store

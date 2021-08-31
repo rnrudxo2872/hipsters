@@ -4,11 +4,11 @@ import java.util.List;
 
 import com.dosters.api.todo.service.DostersToDoService;
 import com.dosters.dtos.CommonOutput;
-import com.dosters.todo.domain.ToDoEntity;
+import com.dosters.api.todo.domain.ToDoEntity;
+import com.dosters.api.todo.dtos.ToDoDto;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,18 +25,18 @@ public class ToDoRestController {
     }
 
     @GetMapping("")
-    public String getToDoList(Model model) throws Exception {
+    public List<ToDoDto.Info> getToDoList() throws Exception {
         logger.info("get -> DoMain!");
 
-        List<ToDoEntity> test = todoService.getAll();
-        return test.toString();
+        List<ToDoDto.Info> test = todoService.getAll();
+        return test;
     }
 
     @PostMapping("")
-    public String createToDo(ToDoEntity todoEntity) throws Exception {
+    public String createToDo(ToDoDto.Post todoDto) throws Exception {
         logger.info("post -> insert ToDo!");
 
-        CommonOutput result = todoService.createOne(todoEntity);
+        CommonOutput result = todoService.createOne(todoDto);
         return result.toString();
     }
 }
