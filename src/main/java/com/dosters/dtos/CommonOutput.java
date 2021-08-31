@@ -6,6 +6,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class CommonOutput {
-    public boolean ok;
+    public Boolean ok;
     public String error;
 }

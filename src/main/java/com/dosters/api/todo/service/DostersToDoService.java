@@ -31,19 +31,23 @@ public class DostersToDoService implements ToDoService {
         List<ToDoEntity> findResult = todoRepository.findAll();
         List<ToDoDto.Info> retList = findResult.stream().map(entity -> modelMapper.map(entity, ToDoDto.Info.class))
                 .collect(Collectors.toList());
-        logger.info(findResult.toString());
-        logger.info(retList.toString());
         return retList;
     }
 
     @Override
-    public ToDoDto getOne() {
-        Optional<ToDoEntity> test = todoRepository.findById(1L);
-        if (test.isPresent()) {
+    public CommonOutput getOne() {
+        try {
+            Optional<ToDoEntity> test = todoRepository.findById(1L);
+            if (!test.isPresent()) {
+                throw new Exception();
+            }
             ToDoEntity testImpl = test.get();
             logger.info(testImpl.toString());
+            return null;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
-        return null;
     }
 
     @Override
