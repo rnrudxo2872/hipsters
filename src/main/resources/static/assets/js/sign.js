@@ -46,7 +46,8 @@ const emailClickEvent = (event) => {
     }   
 }
 
-emailClick.addEventListener('click',emailClickEvent); //이메일 인증키 전송버튼 클릭 리스너
+if(emailClick){
+emailClick.addEventListener('click',emailClickEvent); }//이메일 인증키 전송버튼 클릭 리스너
 
 
 
