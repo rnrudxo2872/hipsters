@@ -74,6 +74,10 @@ const emailClickEvent = async (event) => {
     }   
 }
 
+<<<<<<< HEAD
+if(emailClick){
+emailClick.addEventListener('click',emailClickEvent); }//이메일 인증키 전송버튼 클릭 리스너
+=======
 const eamilAuthCKEvent = (event) => {
     window.close();
 
@@ -89,6 +93,7 @@ if(emailAuthCK){
 if(emailClick){
     emailClick.addEventListener('click',emailClickEvent); //이메일 인증키 전송버튼 클릭 리스너
 }
+>>>>>>> 3d965ebcf4453c75734664d2dfd8437649bd3061
 
 
 
