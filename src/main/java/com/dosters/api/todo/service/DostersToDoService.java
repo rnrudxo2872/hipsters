@@ -37,15 +37,10 @@ public class DostersToDoService implements ToDoService {
     @Override
     public ToDoDto.Info getOne(long id) {
         try {
-            Optional<ToDoEntity> dbEntity = todoRepository.findById(id);
-
-            if (!dbEntity.isPresent()) {
-                throw new Exception();
-            }
-
-            ToDoEntity entity = dbEntity.get();
+            // Optional<ToDoEntity> dbEntity = todoRepository.findById(id);
+            ToDoEntity entity = todoRepository.getOne(id);
             ToDoDto.Info dto = modelMapper.map(entity, ToDoDto.Info.class);
-            logger.info(dbEntity.toString());
+            logger.info(entity.toString());
 
             return dto;
         } catch (Exception e) {
