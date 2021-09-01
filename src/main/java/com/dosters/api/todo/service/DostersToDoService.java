@@ -35,18 +35,25 @@ public class DostersToDoService implements ToDoService {
     }
 
     @Override
-    public CommonOutput getOne() {
+    public ToDoDto.Info getOne(long id) {
         try {
-            Optional<ToDoEntity> test = todoRepository.findById(1L);
-            if (!test.isPresent()) {
+            Optional<ToDoEntity> dbEntity = todoRepository.findById(id);
+
+            if (!dbEntity.isPresent()) {
                 throw new Exception();
             }
-            ToDoEntity testImpl = test.get();
-            logger.info(testImpl.toString());
-            return null;
+
+            ToDoEntity entity = dbEntity.get();
+            ToDoDto.Info dto = modelMapper.map(entity, ToDoDto.Info.class);
+            logger.info(dbEntity.toString());
+
+            return dto;
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+
+            CommonOutput error = new ToDoDto.Info();
+            error.setStatus(false, "데이터를 불러오는데 실패했습니다.");
+            return (ToDoDto.Info) error;
         }
     }
 

@@ -10,6 +10,7 @@ import com.dosters.api.todo.dtos.ToDoDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,10 +27,21 @@ public class ToDoRestController {
 
     @GetMapping("")
     public List<ToDoDto.Info> getToDoList() throws Exception {
-        logger.info("get -> DoMain!");
+        logger.info("REST : get -> getToDoList");
 
         List<ToDoDto.Info> test = todoService.getAll();
         return test;
+    }
+
+    @GetMapping("/{todoId}")
+    public ToDoDto.Info getToDo(@PathVariable("todoId") Long id) throws Exception {
+        logger.info("REST : get -> getToDo");
+
+        if (id == null) {
+            return (ToDoDto.Info) CommonOutput.getStatus(false, "error");
+        }
+        ToDoDto.Info retDto = (ToDoDto.Info) todoService.getOne(id);
+        return retDto;
     }
 
     @PostMapping("")
