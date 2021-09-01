@@ -45,10 +45,10 @@ public class ToDoRestController {
     }
 
     @PostMapping("")
-    public String createToDo(ToDoDto.Post todoDto) throws Exception {
+    public CommonOutput createToDo(ToDoDto.Post todoDto) throws Exception {
         logger.info("post -> insert ToDo!");
 
         CommonOutput result = todoService.createOne(todoDto);
-        return result.toString();
+        return result;
     }
 }

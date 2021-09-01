@@ -13,6 +13,7 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class DostersToDoService implements ToDoService {
@@ -35,9 +36,9 @@ public class DostersToDoService implements ToDoService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public ToDoDto.Info getOne(long id) {
         try {
-            // Optional<ToDoEntity> dbEntity = todoRepository.findById(id);
             ToDoEntity entity = todoRepository.getOne(id);
             ToDoDto.Info dto = modelMapper.map(entity, ToDoDto.Info.class);
             logger.info(entity.toString());
@@ -58,6 +59,6 @@ public class DostersToDoService implements ToDoService {
         todo.setContent("test");
         todoRepository.save(todo);
         logger.info("넣었다!");
-        return null;
+        return CommonOutput.getStatus(true, null);
     }
 }
