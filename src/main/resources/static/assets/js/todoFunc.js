@@ -32,7 +32,8 @@ const fetchError = (err) => {
 }
 
 const init = async () => {
-    await getUserToDoList();
+    // await getUserToDoList();
+    
 }
 
 init()

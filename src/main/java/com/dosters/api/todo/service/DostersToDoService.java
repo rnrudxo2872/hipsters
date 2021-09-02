@@ -1,12 +1,12 @@
 package com.dosters.api.todo.service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import com.dosters.dtos.CommonOutput;
 import com.dosters.api.todo.domain.ToDoEntity;
 import com.dosters.api.todo.dtos.ToDoDto;
+import com.dosters.api.todo.dtos.ToDoDto.Post;
 import com.dosters.api.todo.repository.ToDoRepository;
 
 import org.modelmapper.ModelMapper;
@@ -56,9 +56,14 @@ public class DostersToDoService implements ToDoService {
     @Override
     public CommonOutput createOne(ToDoDto todoDto) {
         ToDoEntity todo = new ToDoEntity();
-        todo.setContent("test");
-        todoRepository.save(todo);
-        logger.info("넣었다!");
+        ToDoDto temp = new ToDoDto.Post();
+        temp = todoDto;
+        ToDoDto.Post response = (Post) temp;
+        logger.info("error =>> {}", temp.error);
+        logger.info("getContent() =>> {}", response.getContent());
+        // todo.setContent("test");
+        // todoRepository.save(todo);
+        // logger.info("넣었다!");
         return CommonOutput.getStatus(true, null);
     }
 }

@@ -2,11 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorator="/layout/todo_layout">
+      layout:decorate="~{/layout/todo_layout}">
 
     <div layout:fragment="content" class="main-content">
         <div class="todo-mainWrapper">
             <div id="todo-nowList"></div>
+            <div id="todo-insertBox" class="divWrapper">
+                <input type="text" name="todo__content" id="todo-insertBox__content" class="navbar form-inline form-control" placeholder="해야 될 일을 작성해 보세요!">
+                <button class="navbar form-inline btn"><i class="fas fa-arrow-right"></i></button>
+            </div>
         </div>
     </div>
 </html>
