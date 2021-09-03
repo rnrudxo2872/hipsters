@@ -1,9 +1,11 @@
 package com.dosters.api.todo.dtos;
 
+import com.dosters.dtos.CommonOutput;
+
 import lombok.Getter;
 import lombok.Setter;
 
-public class ToDoDto {
+public class ToDoDto extends CommonOutput {
 
     @Getter
     @Setter

@@ -1,18 +1,19 @@
 package com.dosters.api.todo.service;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 import com.dosters.dtos.CommonOutput;
 import com.dosters.api.todo.domain.ToDoEntity;
 import com.dosters.api.todo.dtos.ToDoDto;
+import com.dosters.api.todo.dtos.ToDoDto.Post;
 import com.dosters.api.todo.repository.ToDoRepository;
 
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class DostersToDoService implements ToDoService {
@@ -35,27 +36,34 @@ public class DostersToDoService implements ToDoService {
     }
 
     @Override
-    public CommonOutput getOne() {
+    @Transactional(readOnly = true)
+    public ToDoDto.Info getOne(long id) {
         try {
-            Optional<ToDoEntity> test = todoRepository.findById(1L);
-            if (!test.isPresent()) {
-                throw new Exception();
-            }
-            ToDoEntity testImpl = test.get();
-            logger.info(testImpl.toString());
-            return null;
+            ToDoEntity entity = todoRepository.getOne(id);
+            ToDoDto.Info dto = modelMapper.map(entity, ToDoDto.Info.class);
+            logger.info(entity.toString());
+
+            return dto;
         } catch (Exception e) {
             e.printStackTrace();
-            return null;
+
+            CommonOutput error = new ToDoDto.Info();
+            error.setStatus(false, "데이터를 불러오는데 실패했습니다.");
+            return (ToDoDto.Info) error;
         }
     }
 
     @Override
     public CommonOutput createOne(ToDoDto todoDto) {
         ToDoEntity todo = new ToDoEntity();
-        todo.setContent("test");
-        todoRepository.save(todo);
-        logger.info("넣었다!");
-        return null;
+        ToDoDto temp = new ToDoDto.Post();
+        temp = todoDto;
+        ToDoDto.Post response = (Post) temp;
+        logger.info("error =>> {}", temp.error);
+        logger.info("getContent() =>> {}", response.getContent());
+        // todo.setContent("test");
+        // todoRepository.save(todo);
+        // logger.info("넣었다!");
+        return CommonOutput.getStatus(true, null);
     }
 }
