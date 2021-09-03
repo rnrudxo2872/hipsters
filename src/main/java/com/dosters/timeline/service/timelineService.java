@@ -1,22 +1,16 @@
 package com.dosters.timeline.service;
 
+import com.dosters.timeline.domain.timelineEntity;
+import com.dosters.timeline.dto.writeDTO;
+import com.dosters.timeline.repository.timelineRepo;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
-@Service
+
 public class timelineService {
     
-    private final ModelMapper modelMapper;
-
-    public timelineService(ModelMapper modelMapper){
-        this.modelMapper = modelMapper;
-    }
-    
-    public List write(List writeDTO){
-
-    }
-
-
+    public String writePost(writeDTO writeDTO) throws Exception;
 
 
 

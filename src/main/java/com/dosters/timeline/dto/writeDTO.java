@@ -1,17 +1,14 @@
 package com.dosters.timeline.dto;
 
 import lombok.Builder;
+import lombok.Data;
 import lombok.Getter;
 
-@Getter
+@Data
 public class writeDTO {
     private Long id;
+    private int w_num;
     private String content;
     
-    @Builder
-    public writeDTO(Long id, String content){
-        this.id = id;
-        this.content = content;
-    }
-
+ 
 }

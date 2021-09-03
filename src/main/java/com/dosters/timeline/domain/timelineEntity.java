@@ -25,6 +25,9 @@ import lombok.Setter;
 @Table(name="timeline")
 public class timelineEntity {
     
+    @Column(nullable = false)
+    private int w_num;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(unique = true , nullable = false)
@@ -38,8 +41,9 @@ public class timelineEntity {
     private LocalDateTime createDate;
 
     @Builder
-    public timelineEntity(long id,String content){
+    public timelineEntity(long id,int w_num,String content){
         this.id = id;
+        this.w_num = w_num;
         this.content = content;
 
     }
