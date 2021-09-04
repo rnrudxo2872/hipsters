@@ -1,6 +1,7 @@
 import {borderColorChange} from '../cssEvent.js'
 
 const inputToDo = document.getElementById('todo-insertBox__content');
+const focusBtn = document.querySelector('.focus-insert');
 
 const focusBorderChangeEvent = (event) => {
     console.log(event.target.parentElement);
@@ -13,3 +14,4 @@ const focusOutBorderChangeEvent = (event) => {
 
 inputToDo.addEventListener('focus', focusBorderChangeEvent, true)
 inputToDo.addEventListener('focusout', focusOutBorderChangeEvent)
+focusBtn.addEventListener('click', (_) => inputToDo.focus())
