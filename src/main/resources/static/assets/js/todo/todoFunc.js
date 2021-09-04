@@ -1,3 +1,5 @@
+import './cssEvent.js'
+
 const nowList = document.getElementById('todo-nowList');
 
 const getUserToDoList = async () => {
