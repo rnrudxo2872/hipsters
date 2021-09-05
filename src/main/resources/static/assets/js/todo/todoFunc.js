@@ -1,4 +1,4 @@
-import './cssEvent.js'
+import './event.js'
 
 const nowList = document.getElementById('todo-nowList');
 
@@ -35,7 +35,6 @@ const fetchError = (err) => {
 
 const init = async () => {
     // await getUserToDoList();
-    
 }
 
 init()
