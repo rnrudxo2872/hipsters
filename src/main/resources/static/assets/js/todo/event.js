@@ -1,4 +1,3 @@
-import { stringify } from 'querystring';
 import {borderColorChange} from '../cssEvent.js'
 
 const inputToDo = document.getElementById('todo-insertBox__content');
@@ -14,6 +13,7 @@ const focusOutBorderChangeEvent = (event) => {
 }
 
 const createUserToDo = async (event) => {
+    
     if(event.key === 'Enter'){
         const url = '/api/todo'
         const body = {
@@ -21,8 +21,14 @@ const createUserToDo = async (event) => {
         }
         const reqData = {
             method:'POST',
-            body: stringify(body)
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(body)
         }
+
+        const result = await (await fetch(url,reqData)).json()
+        event.target.value = '';
     }
 }
 
