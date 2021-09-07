@@ -40,7 +40,7 @@ public class ToDoRestControllerTests {
     @Test
     void getAll() throws Exception {
         List<ToDoEntity> todo = new ArrayList<>();
-        todo.add(new ToDoEntity(1, "title", 1));
+        // todo.add(new ToDoEntity(1, "title", 1));
 
         // when(todoService.getAll()).thenReturn(todo);
 
