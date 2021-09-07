@@ -1,3 +1,5 @@
+import './event.js'
+
 const nowList = document.getElementById('todo-nowList');
 
 const getUserToDoList = async () => {
@@ -33,7 +35,6 @@ const fetchError = (err) => {
 
 const init = async () => {
     // await getUserToDoList();
-    
 }
 
 init()

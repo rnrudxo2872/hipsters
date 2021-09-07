@@ -1,3 +1,23 @@
+#todo-insertBox {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
 .divWrapper {
     max-width: 50%;
+    background-color: #fff !important;
+    border-radius: 8px;
+}
+
+.divWrapper > #todo-insertBox__content {
+    background-color: #fff !important;
+    border-color: transparent !important;
+}
+
+.divWrapper > .btn {
+    background-color: #fff;
+    border-color: transparent;
 }

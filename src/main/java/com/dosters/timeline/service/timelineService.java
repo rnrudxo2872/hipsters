@@ -7,11 +7,8 @@ import com.dosters.timeline.repository.timelineRepo;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+public interface timelineService {
 
-public class timelineService {
-    
     public String writePost(writeDTO writeDTO) throws Exception;
-
-
 
 }

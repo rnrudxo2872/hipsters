@@ -55,15 +55,18 @@ public class DostersToDoService implements ToDoService {
 
     @Override
     public CommonOutput createOne(ToDoDto todoDto) {
-        ToDoEntity todo = new ToDoEntity();
+        ToDoEntity todoEntity = new ToDoEntity();
         ToDoDto temp = new ToDoDto.Post();
         temp = todoDto;
-        ToDoDto.Post response = (Post) temp;
+        ToDoDto.Post reqData = (Post) temp;
         logger.info("error =>> {}", temp.error);
-        logger.info("getContent() =>> {}", response.getContent());
+        logger.info("getContent() =>> {}", reqData.getContent());
+
+        todoEntity = modelMapper.map(reqData, ToDoEntity.class);
+        todoRepository.save(todoEntity);
         // todo.setContent("test");
         // todoRepository.save(todo);
-        // logger.info("넣었다!");
+        logger.info("넣었다!");
         return CommonOutput.getStatus(true, null);
     }
 }
